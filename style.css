@@ -1,0 +1,127 @@
+/* Đặt lại kiểu dáng cơ bản */
+body, h1, h2, h3, p, ul, li, form, input, select, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Kiểu dáng header */
+header {
+    background-color: #e0f2fe;
+    color: #333;
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* Kiểu dáng quote section */
+.quote {
+    background-color: #e0f2fe;
+    padding: 50px 0;
+}
+
+.quote .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quote-left {
+    flex: 1;
+}
+
+.quote-left img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.quote-right {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.quote-right h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+quote-right form input,
+.quote-right form select,
+.quote-right form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.quote-right form button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.balance-input {
+    display: flex;
+    align-items: center;
+}
+
+.balance-input input {
+    flex: 1;
+}
+
+/* Kiểu dáng services section */
+.services {
+    padding: 50px 0;
+}
+
+.services .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services-list {
+    flex: 1;
+}
+
+.services-list ul {
+    list-style: none;
+}
+
+.follow-us {
+    flex: 1;
+    text-align: center;
+}
+
+.social-icons img {
+    max-width: 30px;
+    margin: 0 10px;
+}
+
+/* Kiểu dáng footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .quote .container,
+    .services .container {
+        flex-direction: column;
+    }
+}
