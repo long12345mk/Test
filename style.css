@@ -201,18 +201,117 @@ footer {
 /* Kiểu dáng ABOUT US section */
 .about {
     padding: 50px 0;
-    background-color: #f9f9f9; /* Màu nền xám nhạt */
     text-align: center;
 }
 
-.about h2 {
-    margin-bottom: 20px;
-}
-
-.about p {
+.about-content {
     max-width: 800px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.about-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
     line-height: 1.6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+/* Kiểu dáng YOUR FAMILY MATTER section */
+.family {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.family-items {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.family-item {
+    text-align: left;
+    margin: 20px;
+}
+
+.family-image img {
+    max-width: 400px;
+}
+
+.family-lists {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.family-list h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.family-list ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+family-list li {
+    margin-bottom: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .family-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .family-image img {
+        max-width: 100%;
+    }
+
+    .family-lists {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .family-list {
+        text-align: center;
+    }
 }
 
 /* Kiểu dáng SERVICE section */
@@ -260,7 +359,7 @@ footer {
 /* Kiểu dáng YOUR ANSWER (FAQ) section */
 .faq {
     padding: 50px 0;
-    background-color: #f0f8ff; /* Màu nền xanh nhạt */
+    background-color: #f0f8ff;
 }
 
 .faq h2 {
