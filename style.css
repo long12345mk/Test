@@ -389,21 +389,26 @@ question p {
 /* Kiểu dáng INTRO section */
 .intro {
     padding: 50px 0;
-    background-color: #f9f9f9; /* Màu nền xám nhạt */
+    background-color: #f9f9f9;
 }
 
 .intro .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
     align-items: center;
+    flex-wrap: wrap; /* Cho phép các phần tử xuống dòng khi cần thiết */
 }
 
-.intro-left {
+.intro-left, .intro-right {
+    display: flex; /* Sử dụng flexbox để căn chỉnh nội dung bên trong */
+    flex-direction: column; /* Xếp chồng nội dung theo cột */
+    align-items: center; /* Căn giữa nội dung theo chiều ngang */
     text-align: center;
+    margin: 20px; /* Thêm khoảng cách giữa các phần tử */
 }
 
 .intro-left img {
-    max-width: 200px; /* Điều chỉnh kích thước hình ảnh */
+    max-width: 200px;
     border-radius: 50%;
     margin-bottom: 20px;
 }
@@ -413,18 +418,24 @@ question p {
     margin-bottom: 10px;
 }
 
-intro-left p {
+.intro-left p {
     font-size: 1.1em;
 }
 
 .intro-right {
     max-width: 500px;
-    text-align: left;
 }
 
 .intro-right p {
     font-size: 1.1em;
     line-height: 1.6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .intro-left, .intro-right {
+        flex-basis: 100%; /* Chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+    }
 }
 
 /* Kiểu dáng STATS section */
