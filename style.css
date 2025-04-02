@@ -33,10 +33,13 @@ header {
 .quote .container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Cho phép các phần tử xuống dòng khi màn hình nhỏ */
 }
 
 .quote-left {
     flex: 1;
+    min-width: 300px; /* Đảm bảo chiều rộng tối thiểu */
+    margin-bottom: 20px; /* Khoảng cách giữa các phần tử khi xếp chồng */
 }
 
 .quote-left img {
@@ -47,6 +50,7 @@ header {
 
 .quote-right {
     flex: 1;
+    min-width: 300px; /* Đảm bảo chiều rộng tối thiểu */
     background-color: white;
     padding: 20px;
     border-radius: 5px;
@@ -57,7 +61,7 @@ header {
     margin-bottom: 20px;
 }
 
-quote-right form input,
+.quote-right form input,
 .quote-right form select,
 .quote-right form button {
     width: 100%;
@@ -90,10 +94,13 @@ quote-right form input,
 .services .container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Cho phép các phần tử xuống dòng khi màn hình nhỏ */
 }
 
 .services-list {
     flex: 1;
+    min-width: 300px; /* Đảm bảo chiều rộng tối thiểu */
+    margin-bottom: 20px; /* Khoảng cách giữa các phần tử khi xếp chồng */
 }
 
 .services-list ul {
@@ -102,6 +109,7 @@ quote-right form input,
 
 .follow-us {
     flex: 1;
+    min-width: 300px; /* Đảm bảo chiều rộng tối thiểu */
     text-align: center;
 }
 
