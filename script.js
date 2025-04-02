@@ -47,4 +47,14 @@ document.addEventListener('DOMContentLoaded', function() {
             question.classList.toggle('active');
         });
     });
+
+    // Thêm icon check vào danh sách "YOUR FAMILY MATTER"
+    const listItems = document.querySelectorAll('.family-list li');
+    listItems.forEach(item => {
+        const icon = document.createElement('i');
+        icon.classList.add('fas', 'fa-check');
+        icon.style.color = 'green';
+        icon.style.marginRight = '5px';
+        item.prepend(icon);
+    });
 });
