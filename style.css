@@ -20,163 +20,103 @@ body {
 header {
     background-color: #e0f2fe;
     color: #333;
-    text-align: center;
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
-/* Kiểu dáng quote section */
-.quote {
+header h1 {
+    font-size: 1.5em;
+    margin-left: 20px;
+}
+
+/* Kiểu dáng phần thông tin Thảo Hồ */
+.thao-ho-info {
     background-color: #e0f2fe;
-    padding: 50px 0;
+    padding: 20px 0;
 }
 
-.quote .container {
+.thao-ho-info .container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Cho phép các phần tử xuống dòng khi màn hình nhỏ */
+    align-items: center;
 }
 
-.quote-left {
+.thao-ho-details {
     flex: 1;
-    min-width: 300px; /* Đảm bảo chiều rộng tối thiểu */
-    margin-bottom: 20px; /* Khoảng cách giữa các phần tử khi xếp chồng */
 }
 
-.quote-left img {
-    max-width: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-.quote-right {
-    flex: 1;
-    min-width: 300px; /* Đảm bảo chiều rộng tối thiểu */
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.quote-right h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.quote-right form input,
-.quote-right form select,
-.quote-right form button {
-    width: 100%;
-    padding: 10px;
+.thao-ho-details h2 {
+    font-size: 2em;
     margin-bottom: 10px;
+}
+
+.thao-ho-details p {
+    margin-bottom: 5px;
+}
+
+.search-box {
+    display: flex;
+    margin-top: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 8px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
-.quote-right form button {
+.search-box button {
     background-color: #4CAF50;
     color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.balance-input {
-    display: flex;
-    align-items: center;
-}
-
-.balance-input input {
+.thao-ho-image {
     flex: 1;
+    text-align: right;
 }
 
-/* Kiểu dáng services section */
-.services {
+.thao-ho-image img {
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+/* Kiểu dáng các phần còn lại */
+.needs, .about, .service, .intro, .stats, .faq, .quote {
     padding: 50px 0;
 }
 
-.services .container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Cho phép các phần tử xuống dòng khi màn hình nhỏ */
-}
-
-.services-list {
-    flex: 1;
-    min-width: 300px; /* Đảm bảo chiều rộng tối thiểu */
-    margin-bottom: 20px; /* Khoảng cách giữa các phần tử khi xếp chồng */
-}
-
-.services-list ul {
-    list-style: none;
-}
-
-.follow-us {
-    flex: 1;
-    min-width: 300px; /* Đảm bảo chiều rộng tối thiểu */
+.needs .container, .about .container, .service .container,
+.intro .container, .stats .container, .faq .container, .quote .container {
     text-align: center;
 }
 
-.social-icons img {
-    max-width: 30px;
-    margin: 0 10px;
-}
-
-/* Kiểu dáng footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 30px 0;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .quote .container,
-    .services .container {
-        flex-direction: column;
-    }
-}
-
-/* Kiểu dáng YOU NEEDS section */
-.needs {
-    padding: 50px 0;
-}
-
-.needs .container {
-    text-align: center;
-}
-
-.needs-items {
+.needs-items, .service-items, .stats .container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 30px;
 }
 
-.needs-item {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    width: 45%;
-    max-width: 500px;
-    justify-content: space-between;
+.needs-item, .service-item, .stat {
+    text-align: center;
+    margin: 20px;
+    max-width: 300px;
 }
 
-.needs-item-content {
-    text-align: left;
+.needs-item img, .service-item img {
+    max-width: 150px;
+    margin-bottom: 15px;
 }
 
-.needs-item span {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-right: 15px;
-}
-
-.needs-item h3 {
+.needs-item h3, .service-item h3, .stat h3 {
     margin-bottom: 10px;
 }
 
-.needs-item p {
+.needs-item p, .service-item p, .stat p {
     font-size: 0.9em;
 }
 
@@ -189,19 +129,6 @@ footer {
     border: none;
     font-size: 1.5em;
     cursor: pointer;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .needs-item {
-        width: 100%;
-    }
-}
-
-/* Kiểu dáng ABOUT US section */
-.about {
-    padding: 50px 0;
-    text-align: center;
 }
 
 .about-content {
@@ -238,39 +165,8 @@ footer {
     line-height: 1.6;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-    }
-
-    .about-text {
-        padding-left: 0;
-        text-align: center;
-    }
-}
-
-/* Kiểu dáng YOUR FAMILY MATTER section */
-.family {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.family-items {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.family-item {
+.family-matter {
     text-align: left;
-    margin: 20px;
-}
-
-.family-image img {
-    max-width: 400px;
 }
 
 .family-lists {
@@ -289,88 +185,18 @@ footer {
     padding-left: 20px;
 }
 
-family-list li {
+.family-list li {
     margin-bottom: 5px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .family-items {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .family-image img {
-        max-width: 100%;
-    }
-
-    .family-lists {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .family-list {
-        text-align: center;
-    }
-}
-
-/* Kiểu dáng SERVICE section */
-.service {
-    padding: 50px 0;
-}
-
-.service h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.service-items {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.service-item {
-    text-align: center;
-    margin: 20px;
-    max-width: 300px;
-}
-
-.service-item img {
-    max-width: 150px;
-    margin-bottom: 15px;
-}
-
-.service-item h3 {
-    margin-bottom: 10px;
-}
-
-.service-item p {
-    font-size: 0.9em;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .service-item {
-        max-width: 100%;
-    }
-}
-
-/* Kiểu dáng YOUR ANSWER (FAQ) section */
-.faq {
-    padding: 50px 0;
-    background-color: #f0f8ff;
-}
-
-.faq h2 {
-    text-align: center;
-    margin-bottom: 30px;
+.family-image img {
+    max-width: 400px;
 }
 
 .faq-items {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Chia thành 2 cột */
-    gap: 20px; /* Khoảng cách giữa các item */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -410,34 +236,6 @@ family-list li {
     line-height: 1.6;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .faq-items {
-        grid-template-columns: 1fr; /* 1 cột trên màn hình nhỏ */
-    }
-}
-
-/* Kiểu dáng INTRO section */
-.intro {
-    padding: 50px 0;
-    background-color: #f9f9f9;
-}
-
-.intro .container {
-    display: flex;
-    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
-    align-items: center;
-    flex-wrap: wrap; /* Cho phép các phần tử xuống dòng khi cần thiết */
-}
-
-.intro-left, .intro-right {
-    display: flex; /* Sử dụng flexbox để căn chỉnh nội dung bên trong */
-    flex-direction: column; /* Xếp chồng nội dung theo cột */
-    align-items: center; /* Căn giữa nội dung theo chiều ngang */
-    text-align: center;
-    margin: 20px; /* Thêm khoảng cách giữa các phần tử */
-}
-
 .intro-left img {
     max-width: 200px;
     border-radius: 50%;
@@ -462,46 +260,60 @@ family-list li {
     line-height: 1.6;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .intro-left, .intro-right {
-        flex-basis: 100%; /* Chiếm toàn bộ chiều rộng trên màn hình nhỏ */
-    }
-}
-
-/* Kiểu dáng STATS section */
-.stats {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.stats .container {
+.balance-input {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+}
+
+.balance-input input {
+    flex: 1;
+}
+
+/* Kiểu dáng footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
-.stat {
-    margin: 20px;
+.footer-logo img {
+    max-width: 150px;
 }
 
-.stat h3 {
-    font-size: 2em;
-    margin-bottom: 10px;
+.footer-info {
+    text-align: left;
 }
 
-.stat p {
-    font-size: 1.1em;
+.footer-map iframe {
+    width: 300px;
+    height: 200px;
+    border: 0;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .intro .container {
+    .thao-ho-info .container,
+    .footer-content,
+    .about-content,
+    .family-lists {
         flex-direction: column;
+        align-items: center;
     }
 
-    .intro-right {
+    .thao-ho-image {
         text-align: center;
-        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .about-text {
+        padding-left: 0;
+        text-align: center;
     }
 }
