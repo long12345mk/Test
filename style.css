@@ -216,9 +216,11 @@ footer {
     text-align: center;
 }
 
-.about-image img {
-    max-width: 100%;
+/* Áp dụng kiểu dáng giống nhau cho cả hai bức ảnh */
+.about-image img, .quote-left img {
+    max-width: 150px;
     border-radius: 50%;
+    margin-bottom: 20px;
 }
 
 .about-text {
@@ -440,8 +442,8 @@ family-list li {
 
 .intro-left img {
     max-width: 200px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+        border-radius: 50%;
+        margin-bottom: 20px;
 }
 
 .intro-left h2 {
