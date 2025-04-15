@@ -31,4 +31,11 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     },
   });
+  document.querySelectorAll('.faq-card .toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.parentElement.nextElementSibling;
+      answer.classList.toggle('open');
+      button.textContent = answer.classList.contains('open') ? '-' : '+';
+    });
+  });
   
