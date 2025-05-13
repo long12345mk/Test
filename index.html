@@ -1,262 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thin Crust Pizza</title>
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.png" type="image/png" />
-
-  <!-- Back to Top Button -->
-<button onclick="scrollToTop()" id="backToTop" title="Go to top" class="btn btn-danger position-fixed" style="bottom: 80px; right: 20px; display: none;">↑</button>
-
-  <!-- SEO -->
-  <meta name="description" content="Delicious thin crust pizza made with fresh ingredients. Explore our menu and order now!">
-  <meta name="keywords" content="pizza, thin crust, menu, delivery, restaurant">
-  <meta name="author" content="Thin Crust Pizza Team">
-
-  <!-- Bootstrap & Fonts -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
-          <li class="nav-item"><a class="nav-link" href="#menu">MENU</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
-          <li class="nav-item"><a class="nav-link" href="#myMap">CONTACT</a></li>
-        </ul>
-      </div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thao Ho (Hannah) - Consultant</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="contact-info">
+      <span><i class="fas fa-id-card"></i> National License: 20310594</span>
+      <span><i class="fas fa-envelope"></i> thao.ho@theguardians.life</span>
+      <span><i class="fas fa-phone"></i> 971-269-8689</span>
     </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="image/logo.png" alt="Guardian Life Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#about">ABOUT US</a></li>
+      <li><a href="#service">SERVICE</a></li>
+      <li><a href="#testimonial">TESTIMONIAL</a></li>
+      <li><a href="#awards">AWARDS</a></li>
+      <li><a href="#answers">YOUR ANSWER</a></li>
+      <li><a href="#contact">CONTACT US</a></li>
+      <li class="lang-switcher">
+        <a href="#">TIẾNG VIỆT</a>
+        <span class="dropdown-arrow">▼</span>
+      </li>
+    </ul>
   </nav>
 
-  <!-- Header -->
-  <header class="bgimg d-flex align-items-center justify-content-center text-center text-white position-relative" id="home" style="height: 800px; background-image: url('images/pizaaa.webp'); background-size: cover; filter: grayscale(80%);">
-    <div>
-      <h1 class="d-none d-sm-block display-1">thin<br>CRUST PIZZA</h1>
-      <h1 class="d-block d-sm-none display-4">thin<br>CRUST PIZZA</h1>
-      <a href="#menu" class="btn btn-lg btn-dark mt-3">Let see the menu</a>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-text">
+      <h1>THAO HO (HANNAH)</h1>
+      <h2>INDEPENDENT AGENT</h2>
+      <p>Our job is proving you and your family a life time financial protection.</p>
     </div>
-    <div class="position-absolute bottom-0 start-0 m-3">
-      <span class="badge bg-secondary fs-4">Open from 10am to 12pm</span>
+    <div class="hero-img">
+      <img src="image/thao-ho.png" alt="Thao Ho">
     </div>
   </header>
 
-  <!-- Menu -->
-  <section class="container-fluid bg-dark text-white py-5" id="menu">
-    <div class="container">
-      <h1 class="text-center display-1 mb-5">THE MENU</h1>
-      <div class="nav nav-pills justify-content-center mb-4" role="tablist">
-        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#Pizza">Pizza</button>
-        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Pasta">Pasta</button>
-        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Starter">Starter</button>
+  <!-- YOU NEEDS Section -->
+  <section class="you-needs">
+    <h2>YOUR NEEDS</h2>
+    <p>We provide a variety of products tailored to your financial needs.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="badge">01</div>
+        <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+        <h4>Living with benefits Insurance</h4>
+        <p>We provide a variety of products<br> tailored to your financial needs.</p>
+      </div>      
+      <div class="card">
+        <div class="badge">02</div>
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4>Mortgage Protection</h4>
+        <p>We provide a variety of products<br> tailored to your financial needs.</p>
       </div>
-      <div class="tab-content text-dark bg-white p-4 rounded">
-        <div class="tab-pane fade show active" id="Pizza">
-          <h1><b>Margherita</b> <span class="badge bg-dark float-end">$12.50</span></h1>
-          <p class="text-muted">Fresh tomatoes, fresh mozzarella, fresh basil</p>
-          <button class="btn btn-sm btn-outline-primary mb-3 add-to-cart" data-name="Margherita" data-price="12.5">Add to Cart</button>
-          <hr>
-          <h1><b>Formaggio</b> <span class="badge bg-dark float-end">$15.50</span></h1>
-          <p class="text-muted">Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)</p>
-          <button class="btn btn-sm btn-outline-primary mb-3 add-to-cart" data-name="Formaggio" data-price="15.5">Add to Cart</button>
-          <hr>
-          <h1><b>Chicken</b> <span class="badge bg-dark float-end">$17.00</span></h1>
-          <p class="text-muted">Fresh tomatoes, mozzarella, chicken, onions</p>
-          <button class="btn btn-sm btn-outline-primary mb-3 add-to-cart" data-name="Chicken" data-price="17">Add to Cart</button>
-          <hr>
-          <h1><b>Pineapple'o'clock</b> <span class="badge bg-dark float-end">$16.50</span></h1>
-          <p class="text-muted">Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil</p>
-          <button class="btn btn-sm btn-outline-primary mb-3 add-to-cart" data-name="Pineapple'o'clock" data-price="16.5">Add to Cart</button>
-          <hr>
-          <h1><b>Meat Town</b> <span class="badge bg-danger">Hot!</span> <span class="badge bg-dark float-end">$20.00</span></h1>
-          <p class="text-muted">Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken</p>
-          <button class="btn btn-sm btn-outline-primary mb-3 add-to-cart" data-name="Meat Town" data-price="20">Add to Cart</button>
-          <hr>
-          <h1><b>Parma</b> <span class="badge bg-secondary">New</span> <span class="badge bg-dark float-end">$21.50</span></h1>
-          <p class="text-muted">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
-          <button class="btn btn-sm btn-outline-primary mb-3 add-to-cart" data-name="Parma" data-price="21.5">Add to Cart</button>
-        </div>
+      <div class="card">
+        <div class="badge">03</div>
+        <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+        <h4>College Funding</h4>
+        <p>We provide a variety of products<br> tailored to your financial needs.</p>
+      </div>
+      <div class="card">
+        <div class="badge">04</div>
+        <div class="icon"><i class="fas fa-infinity"></i></div>
+        <h4>Life Time Income Tax Free</h4>
+        <p>We provide a variety of products<br> tailored to your financial needs.</p>
+      </div>
+    </div>
+  </section>
+  <section class="about-us">
+    <h2>ABOUT US</h2>
+    <p>We provide a variety of products tailored to your financial needs.</p>
+  </section>
+  
+  <section class="your-family-matter">
+    <div class="image-container">
+      <img src="image/your family.png" alt="Hình ảnh gia đình được che chở bởi đôi tay">
+    </div>
+    <div class="content-container">
+      <h2>YOUR FAMILY MATTER</h2>
+      <p>Independent insurance agents with years of experience in financial services.</p>
+      <ul class="protection-list">
+        <li><i class="fas fa-check"></i> Income Protection</li>
+        <li><i class="fas fa-check"></i> Income Protection</li>
+        <li><i class="fas fa-check"></i> Income Protection</li>
+        <li><i class="fas fa-check"></i> Income Protection</li>
+        <li><i class="fas fa-check"></i> Mortgage Protection</li>
+        <li><i class="fas fa-check"></i> Mortgage Protection</li>
+        <li><i class="fas fa-check"></i> Mortgage Protection</li>
+      </ul>
+    </div>
+  </section>
+  
 
-        <div class="tab-pane fade" id="Pasta">
-          <h1><b>Lasagna</b> <span class="badge bg-secondary">Popular</span> <span class="badge bg-dark float-end">$13.50</span></h1>
-          <p class="text-muted">Special sauce, mozzarella, parmesan, ground beef</p>
-          <button class="btn btn-sm btn-outline-primary mb-3 add-to-cart" data-name="Lasagna" data-price="13.5">Add to Cart</button>
-          <hr>
-          <h1><b>Ravioli</b> <span class="badge bg-dark float-end">$14.50</span></h1>
-          <p class="text-muted">Ravioli filled with cheese</p>
-          <button class="btn btn-sm btn-outline-primary mb-3 add-to-cart" data-name="Ravioli" data-price="14.5">Add to Cart</button>
-          <hr>
-          <h1><b>Spaghetti Classica</b> <span class="badge bg-dark float-end">$13.50</span></h1>
-          <p class="text-muted">Fresh tomatoes, onions, ground beef</p>
-          <button class="btn btn-sm btn-outline-primary mb-3 add-to-cart" data-name="Ravioli" data-price="14.5">Add to Cart</button>
-          <hr>
-        </div>
-        
-        <div class="tab-pane fade" id="Starter">
-          <h1><b>Bruschetta</b> <span class="badge bg-dark float-end">$8.50</span></h1>
-          <p class="text-muted">Bread with pesto, tomatoes, onion, garlic</p>
-          <button class="btn btn-sm btn-outline-primary mb-3 add-to-cart" data-name="Bruschetta" data-price="8.5">Add to Cart</button>
-          <hr>
-          <h1><b>Today's Seasonal Soup</b> <span class="badge bg-dark float-end">$8.50</span></h1>
-          <p class="text-muted">Ask the waiter</p>
-          <button class="btn btn-sm btn-outline-primary mb-3 add-to-cart" data-name="Bruschetta" data-price="8.5">Add to Cart</button>
-          <hr>
-          <h1><b>Garlic bread</b> <span class="badge bg-dark float-end">$9.50</span></h1>
-          <p class="text-muted">Grilled ciabatta, garlic butter, onions</p>
-          <button class="btn btn-sm btn-outline-primary mb-3 add-to-cart" data-name="Garlic bread" data-price="9.5">Add to Cart</button>
-          <hr>
-        </div>
+  <!-- SERVICE Section -->
+  <section id="service" class="services">
+    <h2>SERVICE</h2>
+    <p>We provide insurance services</p>
+    <div class="grid">
+      <div class="card">
+        <img src="image/benefits.png" alt="Living With Benefits Insurance">
+        <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
+        <h4>Living With Benefits Insurance</h4>
+        <p>Living benefits protection</p>
+      </div>
+      <div class="card">
+        <img src="image/life.png" alt="Life Insurances">
+        <div class="icon"><i class="fas fa-heartbeat"></i></div>
+        <h4>Life Insurances (IUL, Whole, Life...)</h4>
+        <p>Whole life protection</p>
+      </div>
+      <div class="card">
+        <img src="image/term.png" alt="Term Insurances">
+        <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+        <h4>Term Insurances</h4>
+        <p>10, 20, or 30-year term protection</p>
+      </div>
+      <div class="card">
+        <img src="image/mortgage.png" alt="Mortgage Protection">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        <h4>Mortgage Protection</h4>
+        <p>Asset and income protection</p>
+      </div>
+      <div class="card">
+        <img src="image/college.png" alt="College Funding">
+        <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+        <h4>College Funding</h4>
+        <p>Education savings plans</p>
+      </div>
+      <div class="card">
+        <img src="image/tax free.png" alt="Life time income tax free">
+        <div class="icon"><i class="fas fa-chart-line"></i><i class="fas fa-dollar-sign small-dollar"></i></div>
+        <h4>Life Time Income Tax Free</h4>
+        <p>Tax-free retirement income</p>
+      </div>
+      <div class="card">
+        <img src="image/retirement.png" alt="Retirement Plan">
+        <div class="icon"><i class="fas fa-piggy-bank"></i></div>
+        <h4>Retirement Plan (IRAs, Roth IRAs, Annuities..)</h4>
+        <p>Efficient retirement plans</p>
       </div>
     </div>
   </section>
 
-  <!-- Giỏ hàng -->
-  <div class="position-fixed bottom-0 end-0 m-4">
-    <button class="btn btn-warning rounded-circle" data-bs-toggle="modal" data-bs-target="#cartModal">
-      🛒 <span class="badge bg-danger" id="cart-count">0</span>
-    </button>
-  </div>
-
-  <div class="modal fade" id="cartModal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Your Cart</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <ul id="cart-items" class="list-group mb-3"></ul>
-          <h5>Total: $<span id="cart-total">0.00</span></h5>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" id="clear-cart">Clear Cart</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-success" id="checkout">Checkout</button>
-        </div>
+  <!-- HELP SECTION -->
+  <section class="help-section">
+    <div class="help-container">
+      <div class="help-left">
+        <h2>We are here to<br>help you</h2>
       </div>
-    </div>
-  </div>
-
-  <!-- About Section -->
-  <section class="container my-5" id="about">
-    <h1 class="text-center display-4 mb-4">ABOUT</h1>
-    <div class="row align-items-center">
-      <div class="col-md-6">
-        <img src="images/thiet-ke-nha-hang-pizza-12.png" alt="Pizza restaurant interior" class="img-fluid rounded shadow">
-      </div>
-      <div class="col-md-6">
-        <h3>We make the best pizza in town</h3>
-        <p>Our pizza is crafted using only the freshest ingredients and traditional recipes passed down through generations. Each slice tells a story of flavor, texture, and passion.</p>
-        <p><strong>Opening hours:</strong> Everyday from 10am to 12pm</p>
-        <p><strong>Address:</strong> 123 Pizza Street, Flavor Town</p>
-        <p class="text-end"><strong>The Chef?</strong> Mr. Italiano himself</p>
-        <img src="images/chef.jpg" style="width:150px" class="rounded float-end ms-2" alt="Chef Italiano, our head chef at Thin Crust Pizza">
-        <p>We are proud of our interiors.</p>
+      <div class="vertical-line"></div>
+      <div class="help-right">
+        <p>We’ll ensure that you focus on the opportunities that maximize all times like Insurance that fixes your problem</p>
+        <div class="help-call">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <small>Call For Help?</small>
+            <strong>971-269-8689</strong>
+          </div>
+        </div>
       </div>
     </div>
   </section>
   
-    <!-- Contact / Map -->
-    <section class="container-fluid bg-light py-5" id="myMap">
-      <div class="container">
-        <h1 class="text-center display-4 mb-4">CONTACT</h1>
-        <div class="row">
-          <div class="col-md-6">
-            <form>
-              <div class="mb-3">
-                <label for="name" class="form-label">Name:</label>
-                <input type="text" class="form-control" id="name" placeholder="Your name">
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Your email">
-              </div>
-              <div class="mb-3 reservation-people">
-                <label for="people" class="form-label">Number of attendees</label>
-                <input type="number" class="form-control form-control-lg" placeholder="How many people" required name="People" id="people">
-            </div>
-            <div class="mb-3 reservation-datetime">
-                <label for="datetime" class="form-label">Date and time</label>
-                <input type="datetime-local" class="form-control form-control-lg" placeholder="Date and time" required name="date" id="datetime" value="2020-11-16T20:00">
-            </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Message:</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
-              </div>
-              <button type="submit" class="btn btn-dark">Send</button>
-            </form>
+
+
+  <!-- TESTIMONIAL Section -->
+  <section id="testimonial" class="testimonial">
+    <h2>TESTIMONIAL</h2>
+    <p>We provide a variety of products tailored to your financial needs.</p>
+    <div class="tabs">
+      <button>Brochures</button>
+      <button>Retirement Plans</button>
+      <button>Testimonies</button>
+    </div>
+    <div class="grid">
+      <div class="card"><img src="image/Universal Life.png" alt="Index Universal Life _ Brochures"><h4></h4><a href="#">Continue Reading →</a></div>
+      <div class="card"><img src="image/Survivor Life.png" alt="Survivor Life _ Buyer's Guide"><h4></h4><a href="#">Continue Reading →</a></div>
+      <div class="card"><img src="image/Survivor_Life.png" alt="Survivor Life _ Brochures"><h4></h4><a href="#">Continue Reading →</a></div>
+      <div class="card"><img src="image/Whole Life.png" alt="Whole Life _ Brochure 1"><h4></h4><a href="#">Continue Reading →</a></div>
+      <div class="card"><img src="image/Whole_Life.png" alt="Whole Life _ Brochure 2"><h4></h4><a href="#">Continue Reading →</a></div>
+      <div class="card"><img src="image/Term Insurance.png" alt="Term Insurance _ Brochure"><h4></h4><a href="#">Continue Reading →</a></div>
+      <div class="card"><img src="image/Living with benefits.png" alt="Living with benefits Insurance Brochure"><h4></h4><a href="#">Continue Reading →</a></div>
+      <div class="card"><img src="image/Annuity Zenith.png" alt="Annuity Zenith Income"><h4></h4><a href="#">Continue Reading →</a></div>
+      <div class="card"><img src="image/Annuity Zenith Growth.png" alt="Annuity_Zenith Growth 7_Brochures"><h4></h4><a href="#">Continue Reading →</a></div>
+      <div class="card"><img src="image/Annuity_Zenith.png" alt="Annuity_Zenith Income 7"><h4></h4><a href="#">Continue Reading →</a></div>
+      <div class="card"><img src="image/Annuity Zenith Growth.png" alt="Annuity_Zenith Growth 5_Brochures"><h4></h4><a href="#">Continue Reading →</a></div>
+      <div class="card"><img src="image/Annuity Zenith Growth Flyer.png" alt="Annuity Zenith Growth Flyer"><h4></h4><a href="#">Continue Reading →</a></div>
+      <div class="card"><img src="image/Annuity_Zenith Growth 10.png" alt="Annuity_Zenith Growth 10_Brochures"><h4></h4><a href="#">Continue Reading →</a></div>
+      <div class="card"><img src="image/Annuity_Zenith Income.png" alt="Annuity_Zenith Income 10"><h4></h4><a href="#">Continue Reading →</a></div>
+    </div>
+  </section>
+
+ <!-- Post-Testimonial Section with Thao and Metrics --> 
+<section class="testimonial-follow-up">
+  <div class="agent-profile">
+    <img src="image/thao-ho avatar.png" alt="Agent Name">
+    <div class="agent-info">
+      <h3>THAO HO (HANNAH)</h3>
+      <p>Independent Agent</p>
+    </div>
+  </div>
+
+  <section class="stats-section">
+    <div class="stats-container">
+      <div class="stats-left">
+        <h2><span class="highlight">8.62M+</span> clients experience insurance excellence by us.Trusted services, customer-focused solutions, and a legacy of financial reliability.</h2>
+      </div>
+      <div class="stats-right">
+        <div class="stat-card">
+          <i class="fas fa-globe"></i>
+          <h3>189+ <span>Global Country</span></h3>
+          <p>Placerat vestibulum lectus mauris</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>81+ <span>Growth</span></h3>
+          <p>Placerat vestibulum lectus mauris</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-users"></i>
+          <h3>189+ <span>Satisfied Customers</span></h3>
+          <p>Placerat vestibulum lectus mauris</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-thumbs-up"></i>
+          <h3>500+ <span>Satisfaction Rate</span></h3>
+          <p>Placerat vestibulum lectus mauris</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  </section>
+
+  
+  <section class="awards">
+    <h2>AWARDS</h2>
+    <p>We provide insurance services</p>
+  
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="image/award1.png" alt="Award 1">
+        </div>
+        <div class="swiper-slide">
+          <img src="image/award2.jpg" alt="Award 2">
+        </div>
+        <div class="swiper-slide">
+          <img src="image/award3.jpg" alt="Award 3">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+
+  <!-- YOUR ANSWER Section -->
+  <section id="answers" class="answers">
+      <h2>YOUR ANSWER</h2>
+      <p>Frequently asked questions & searching answer.</p>
+      <div class="faq-grid">
+        <div class="faq-card">
+          <div class="faq-question">
+            <span class="icon">?</span>
+            <h3>What is insurance service?</h3>
+            <button class="toggle">-</button>
           </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="ratio ratio-16x9">
-              <iframe src="https://maps.google.com/maps?q=pizza&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy"></iframe>
-            </div>
+          <div class="faq-answer open">
+            <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas dynamically innovate resource.</p>
+          </div>
+        </div>
+    
+        <div class="faq-card">
+          <div class="faq-question">
+            <span class="icon">?</span>
+            <h3>What does insurance entail?</h3>
+            <button class="toggle">-</button>
+          </div>
+          <div class="faq-answer open">
+            <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas dynamically innovate resource.</p>
+          </div>
+        </div>
+    
+        <div class="faq-card">
+          <div class="faq-question">
+            <span class="icon">?</span>
+            <h3>How many services do we provide?</h3>
+            <button class="toggle">+</button>
+          </div>
+          <div class="faq-answer">
+            <p>We provide a variety of insurance services covering health, life, property, and more.</p>
+          </div>
+        </div>
+    
+        <div class="faq-card">
+          <div class="faq-question">
+            <span class="icon">?</span>
+            <h3>What is the experience of our team members?</h3>
+            <button class="toggle">+</button>
+          </div>
+          <div class="faq-answer">
+            <p>Our experienced team brings decades of expertise across multiple insurance categories.</p>
+          </div>
+        </div>
+    
+        <div class="faq-card">
+          <div class="faq-question">
+            <span class="icon">?</span>
+            <h3>Why are we the best company?</h3>
+            <button class="toggle">+</button>
+          </div>
+          <div class="faq-answer">
+            <p>Exceptional service, flexible plans, and customer-focused solutions make us the market leader.</p>
+          </div>
+        </div>
+    
+        <div class="faq-card">
+          <div class="faq-question">
+            <span class="icon">?</span>
+            <h3>How can I cancel my policy?</h3>
+            <button class="toggle">+</button>
+          </div>
+          <div class="faq-answer">
+            <p>You can request a cancellation anytime, subject to applicable terms and conditions.</p>
+          </div>
+        </div>
+    
+        <div class="faq-card">
+          <div class="faq-question">
+            <span class="icon">?</span>
+            <h3>How do I make a claim?</h3>
+            <button class="toggle">+</button>
+          </div>
+          <div class="faq-answer">
+            <p>Contact our support team and we'll guide you through each step of the claim process.</p>
+          </div>
+        </div>
+    
+        <div class="faq-card">
+          <div class="faq-question">
+            <span class="icon">?</span>
+            <h3>What types of policies do you offer?</h3>
+            <button class="toggle">+</button>
+          </div>
+          <div class="faq-answer">
+            <p>We offer life, health, vehicle, property, business, and travel insurance policies.</p>
           </div>
         </div>
       </div>
     </section>
+
+  <!-- GET A FREE ESTIMATE Section (with image) -->
+  <section id="estimate" class="estimate">
+    <div class="estimate-content">
+      <div class="estimate-image">
+        <img src="image/thao-ho.png" alt="Free Estimate">
+      </div>
+      <div class="estimate-text">
+        <h2>GET A FREE ESTIMATE</h2>
+        <p>Get an insurance quote to get started!</p>
+        <form class="estimate-form">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Select type of insurance"></textarea>
+          <div class="balance-limit-container">
+            <label for="balanceSlider">Limits of Balance:</label>
+            <div class="slider-wrapper">
+              <input type="range" id="balanceSlider" min="0" max="700000" value="700000">
+              <div class="slider-track"></div>
+              <div class="slider-thumb"></div>
+            </div>
+          </div>
+          <button type="submit">Get a Quote Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column logo-column">
+          <div class="footer-logo">
+            <img src="image/logo.png" alt="Company Logo">
+            <p>Helping the Asian community in the US have full cover health and financial protection, stable retirement income</p>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa fa-phone"></i>
+            <span>971-229-8689</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa fa-envelope"></i>
+            <span>thao.ho@theguardians.life</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa fa-map-marker"></i>
+            <span>1424 N Brown Rd #450, Lawrenceville, GA 30043</span>
+          </div>
+        </div>
   
-    <!-- Footer -->
-    <footer style="background-color: #111; color: #fff; padding: 40px 0; margin-top: 60px;">
-  <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
-    
-    <!-- Contact Info -->
-    <div style="flex: 1; min-width: 250px;">
-      <h3 style="margin-bottom: 15px;">Contact Us</h3>
-      <p>📍 123 Pizza Street, Da Nang, Vietnam</p>
-      <p>📞 +84 123 456 789</p>
-      <p>📧 contact@pizzashop.vn</p>
+        <!-- Center column -->
+        <div class="footer-column services-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#">Living With Benefits Insurance</a></li>
+            <li><a href="#">Life Insurances (IUL, Whole, Life...)</a></li>
+            <li><a href="#">Term Insurances</a></li>
+            <li><a href="#">Mortgage Protection</a></li>
+            <li><a href="#">College Funding</a></li>
+            <li><a href="#">Life Time Income Tax Free</a></li>
+            <li><a href="#">Retirement Plan (IRAs, Roth IRAs, Annuities..)</a></li>
+          </ul>
+        </div>
+  
+        <!-- Right column -->
+        <div class="footer-column right-column">
+          <h3>Follow Us</h3>
+          <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-threads"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <div class="footer-map">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0860909741976!2d-122.41941538468084!3d37.77492977975978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b5e17db%3A0x6d2b8f8d2f8b1d6c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1616906108254!5m2!1sen!2s"
+              width="100%" height="200" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+          <form class="footer-subscribe">
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            <button type="submit">→</button>
+          </form>
+        </div>
+      </div>
     </div>
-
-    <!-- Opening Hours -->
-    <div style="flex: 1; min-width: 250px;">
-      <h3 style="margin-bottom: 15px;">Opening Hours</h3>
-      <p>🍕 Mon - Fri: 10am - 10pm</p>
-      <p>🍕 Sat - Sun: 11am - 11pm</p>
-    </div>
-
-    <!-- Social Links -->
-    <div style="flex: 1; min-width: 250px;">
-      <h3 style="margin-bottom: 15px;">Follow Us</h3>
-      <a href="#" style="color: #fff; margin-right: 10px;">Facebook</a> |
-      <a href="#" style="color: #fff; margin-left: 10px;">Instagram</a>
-    </div>
-  </div>
-
-  <div style="text-align: center; margin-top: 30px; font-size: 14px; color: #bbb;">
-    © 2025 Pizza Shop. All rights reserved.
-  </div>
-</footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Your custom JS -->
-    <script src="script.js"></script>
-
-      <!-- Toast Notification -->
-<div id="toast" style="
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #28a745;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  display: none;
-  z-index: 9999;
-">
-  Item added to cart!
-</div>
-
-  </body>
-  </html>
+  </footer>
+  
+  
   
