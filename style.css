@@ -1,526 +1,536 @@
 /* styles.css */
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Top Bar */
 .top-bar {
-  background: #073646;
-  padding: 8px 30px;
-  color: #ffffff;
-  font-size: 14px;
+    background: #073646;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 8px 30px; /* Added padding */
 }
 
 .top-bar-content {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 35px;
 }
 
 .top-bar-content .item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .top-bar-content .item i {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 6px;
-  border-radius: 50%;
-  font-size: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px;
+    border-radius: 50%;
+    font-size: 14px;
 }
 
 .top-bar-content .lang-switcher {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .top-bar-content .dropdown-arrow {
-  font-size: 0.8em;
+    font-size: 0.8em;
 }
 
 /* Navigation Bar */
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* đưa logo và menu về bên trái */
-  background: #ffffff;
-  color: #000000;
-  gap: 25px;
-  position: relative;
-  padding: 5px 50px;
-  padding-left: 300px; /* dịch sang phải thêm */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #ffffff;
+    color: #000000;
+    gap: 25px;
+    position: relative;
+    padding: 5px 50px;
+    padding-left: 100px; /* Adjusted padding-left */
 }
 
 .navbar .logo {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
 }
 
 .navbar .logo img {
-  height: auto;
-  max-height: 50px;
-  width: auto;
-  display: block;
-  filter: brightness(0) saturate(100%) invert(22%) sepia(92%) saturate(3250%) hue-rotate(191deg) brightness(95%) contrast(104%);
+    height: auto;
+    max-height: 50px;
+    width: auto;
+    display: block;
+    filter: brightness(0) saturate(100%) invert(22%) sepia(92%) saturate(3250%)
+        hue-rotate(191deg) brightness(95%) contrast(104%);
 }
 
 .navbar .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  align-items: center;
-  margin-left: 0;
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin-left: 0;
 }
 
 .navbar .nav-links li a {
-  color: #000000;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
 }
-
-
 
 /* Hero Section */
 .hero {
-  display: flex;
-  align-items: center;
-  padding: 30px 15px;
-  background-color: #d4f8ff;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 30px 15px;
+    background-color: #d4f8ff;
+    justify-content: center;
+    flex-wrap: wrap; /* Added flex-wrap */
 }
 
 .hero-text {
-  margin-left: 30px;
+    margin-left: 30px;
+    flex: 1 1 400px; /* Added flex basis */
 }
 
 .hero-text h1 {
-  font-size: 60px;
-  margin-bottom: 10px;
+    font-size: 60px;
+    margin-bottom: 10px;
 }
 
 .hero-text h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
 .hero-text p {
-  font-size: 22px;
-  line-height: 1.6;
+    font-size: 22px;
+    line-height: 1.6;
 }
 
 .hero-img {
-  width: 28%;
-  text-align: right;
-  margin-left: 30px;
+    width: auto; /* Changed width to auto */
+    max-width: 50%; /* Added max-width */
+    text-align: right;
+    margin-left: 30px;
+    flex: 1 1 300px; /* Added flex basis */
 }
 
 .hero-img img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
-
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted minmax */
+    gap: 20px;
+    margin-top: 30px;
 }
 
 .card {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  text-align: left;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
 .card img {
-  width: 100%;
-  height: 300px; 
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
+    width: 100%;
+    height: auto; /* Changed height to auto */
+    max-height: 300px; /* Added max-height */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0; /* Adjusted border-radius */
+    margin-bottom: 15px;
 }
 
 .card .card-content {
-  padding: 15px;
+    padding: 15px;
+    flex: 1; /* Added flex: 1 to push content to the bottom */
 }
 
 .card .icon {
-  font-size: 36px;
-  color: #333;
-  margin-bottom: 15px;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 15px;
 }
 
 .card h4 {
-  font-size: 16px;
-  margin: 10px 0;
+    font-size: 16px;
+    margin: 10px 0;
 }
 
 .card p {
-  font-size: 14px;
-  color: #666;
+    font-size: 14px;
+    color: #666;
 }
 
 .card .badge {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 70px;
-  height: 70px;
-  background-color: #007bff;
-  color: #fff;
-  border-bottom-left-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    background-color: #007bff;
+    color: #fff;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 /* YOU NEEDS */
 .you-needs {
-  text-align: center;
-  padding: 40px 20px;
+    text-align: center;
+    padding: 40px 20px;
 }
 
 .you-needs h2 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  color: #333;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 .you-needs p {
-  font-size: 1.1em;
-  color: #666;
-  margin-bottom: 30px;
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
 }
 
 .you-needs .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .you-needs .card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  background: #fff;
-  padding: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Added */
 }
 
 .you-needs .card .icon {
-  font-size: 2.5em;
-  color: #007bff; /* Màu xanh dương chủ đạo */
-  margin-bottom: 15px;
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 15px;
 }
 
 .you-needs .card .badge {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 80px;
-  height: 80px;
-  background-color: #007bff;
-  color: #fff;
-  border-bottom-left-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2em;
-  font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background-color: #007bff;
+    color: #fff;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
-
 .you-needs .card h4 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #333;
-  font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.2em;
 }
 
 .you-needs .card p {
-  font-size: 0.9em;
-  color: #666;
-  line-height: 1.5;
-  text-align: left; /* Căn lề trái phần chữ không in đậm */
-  width: 100%; /* Đảm bảo nội dung trải rộng toàn bộ thẻ */
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+    text-align: left;
+    width: 100%;
+    flex: 1; /* Added */
 }
 
 /* Kiểu dáng đặc biệt cho icon "Life Time Income Tax Free" */
 .you-needs .card .icon .fa-infinity {
-  position: relative;
+    position: relative;
 }
 
 .you-needs .card .icon .small-dollar {
-  font-size: 0.8em;
-  position: absolute;
-  top: 60%;
-  left: 60%;
-  transform: translate(-50%, -50%);
+    font-size: 0.8em;
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%);
 }
 
 /* ABOUT US */
 .about-us {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #d4f8ff; 
-  background-size: cover;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #d4f8ff;
+    background-size: cover;
 }
 
 .about-us h2 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  color: #333;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 .about-us p {
-  font-size: 1.1em;
-  color: #666;
+    font-size: 1.1em;
+    color: #666;
 }
 
 /* UR FAMILY MATTER */
 .your-family-matter {
-  display: flex;
-  align-items: center;
-  padding: 40px 20px;
-  gap: 30px;
-  background-color: #d4f8ff; 
-  background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 30px;
+    background-color: #d4f8ff;
+    background-size: cover;
+    flex-wrap: wrap; /* Added flex-wrap */
 }
 
 .your-family-matter .image-container {
-  flex: 1;
+    flex: 1 1 400px; /* Added flex basis */
 }
 
 .your-family-matter .image-container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .your-family-matter .content-container {
-  flex: 1; /* Giữ nguyên */
-  display: flex;
-  flex-direction: column; /* Sắp xếp theo chiều dọc */
-  align-items: flex-start; /* Căn trái */
-  /* align-items: center; /* Căn giữa */
+    flex: 1 1 400px; /* Added flex basis */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .your-family-matter .content-container h1 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .your-family-matter .content-container .sub-title {
-  color: #777;
+    color: #777;
 }
 
 .your-family-matter h2 {
-  font-size: 2em;
-  margin-bottom: 15px;
-  color: #333;
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #333;
 }
 
 .your-family-matter p {
-  font-size: 1em;
-  color: #666;
-  margin-bottom: 20px;
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
 }
 
 .your-family-matter .protection-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(auto, 200px)); /* Chia thành 2 cột, chiều rộng tối đa khoảng 200px hoặc tự động */
-  gap: 20px; /* Tăng khoảng cách giữa các phần tử */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 200px));
+    gap: 20px;
 }
 
 .your-family-matter .protection-list li {
-  display: flex;
-  align-items: center;
-  color: #333;
+    display: flex;
+    align-items: center;
+    color: #333;
 }
 
 .your-family-matter .protection-list li i {
-  color: #28a745; /* Màu xanh lá cây cho dấu check */
-  margin-right: 8px; /* Tăng khoảng cách giữa icon và text */
+    color: #28a745;
+    margin-right: 8px;
 }
 
 /* SERVICE */
-services {
-  text-align: center;
-  padding: 40px 20px;
+.services {
+    text-align: center;
+    padding: 40px 20px;
 }
 
 .services h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
-  color: #222;
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #222;
 }
 
 .services p {
-  font-size: 1em;
-  color: #555;
-  margin-bottom: 30px;
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 30px;
 }
 
 .services .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted minmax */
+    gap: 20px;
 }
 
 .services .card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Căn lề trái toàn bộ nội dung */
-  text-align: left; /* Đảm bảo chữ hiển thị đúng */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
 }
 
-
 .services .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .service-card img {
-  width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của thẻ */
-  height: auto;
-}
-
-
-.service-card .content {
-  text-align: left; /* Căn lề trái phần nội dung */
-  width: 100%; /* Đảm bảo nội dung trải rộng toàn bộ thẻ */
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Added border-radius */
+    margin-bottom: 10px; /* Added margin-bottom */
 }
 
 .service-card .content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Căn lề trái toàn bộ nội dung */
-  text-align: left; /* Đảm bảo văn bản được căn lề trái */
+    text-align: left;
+    width: 100%;
+    flex: 1; /* Added flex: 1 */
 }
 
 .service-card .content b {
-  display: block; /* Đảm bảo chữ in đậm chiếm toàn bộ chiều ngang */
-  text-align: left; /* Căn lề trái chữ in đậm */
+    display: block;
+    text-align: left;
+    margin-bottom: 5px; /* Added margin-bottom */
 }
 
 .service-card .content p {
-  display: block; /* Đảm bảo các đoạn văn hiển thị đúng */
-  text-align: left; /* Căn lề trái nội dung bên dưới chữ in đậm */
-  margin-top: 5px; /* Tạo khoảng cách hợp lý giữa chữ in đậm và nội dung */
+    display: block;
+    text-align: left;
+    margin-top: 5px;
+    font-size: 0.9em; /* Added font-size */
+    color: #666; /* Added color */
+    line-height: 1.5; /* Added line-height */
 }
 
-
 .services .card h4 {
-  text-align: left; /* Căn lề trái tiêu đề chữ in đậm */
-  margin-bottom: 5px;
+    text-align: left;
+    margin-bottom: 5px;
 }
 
 .services .card p {
-  font-size: 0.9em;
-  color: #666;
-  line-height: 1.5;
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
 }
 
 .services .card .icon {
-  font-size: 2em;
-  color: #007bff;
-  margin-bottom: 10px;
-  text-align: left;
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 10px;
+    text-align: left;
 }
-
 
 /* Kiểu dáng đặc biệt cho icon "Life Time Income Tax Free" */
 .services .card .icon .fa-chart-line {
-  position: relative;
+    position: relative;
 }
 
 .services .card .icon .small-dollar {
-  font-size: 0.8em;
-  position: absolute;
-  top: 60%;
-  left: 100%;
-  transform: translate(-50%, -50%);
+    font-size: 0.8em;
+    position: absolute;
+    top: 60%;
+    left: 100%;
+    transform: translate(-50%, -50%);
 }
 
 /* WE HERE TO HELP */
 .help-section {
-  background-color: #0094ff;
-  padding: 50px 20px;
-  color: #fff;
+    background-color: #0094ff;
+    padding: 50px 20px;
+    color: #fff;
 }
 
 .help-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+    flex-wrap: wrap; /* Added flex-wrap */
+}
+
+.help-left {
+    flex: 1 1 400px; /* Added flex basis */
 }
 
 .help-left h2 {
-  font-size: 2.5em;
-  font-weight: bold;
-  margin: 0;
-  line-height: 1.3;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.3;
 }
 
 .vertical-line {
-  width: 1px;
-  height: 100px;
-  background-color: rgba(255, 255, 255, 0.5);
+    width: 1px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 30px; /* Added margin */
 }
 
 .help-right {
-  max-width: 500px;
+    flex: 1 1 400px; /* Added flex basis */
+    max-width: none; /* Removed max-width */
 }
 
 .help-right p {
-  font-size: 0.95em;
-  margin: 0 0 20px;
-  line-height: 1.5;
+    font-size: 0.95em;
+    margin: 0 0 20px;
+    line-height: 1.5;
 }
 
 .help-call {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .help-call i {
-  font-size: 1.5em;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 12px;
-  border-radius: 50%;
+    font-size: 1.5em;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 12px;
+    border-radius: 50%;
 }
 
 .help-call small {
-  display: block;
-  font-size: 0.8em;
-  opacity: 0.85;
+    display: block;
+    font-size: 0.8em;
+    opacity: 0.85;
 }
 
 .help-call strong {
-  font-size: 1.1em;
+    font-size: 1.1em;
 }
 
 /* TESTIMONIAL */
