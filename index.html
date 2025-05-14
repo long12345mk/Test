@@ -1,460 +1,739 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thao Ho (Hannah) - Consultant</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thao Ho (Hannah) - Consultant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- Top Bar -->
-  <div class="top-bar">
-    <div class="contact-info">
-      <span><i class="fas fa-id-card"></i> National License: 20310594</span>
-      <span><i class="fas fa-envelope"></i> thao.ho@theguardians.life</span>
-      <span><i class="fas fa-phone"></i> 971-269-8689</span>
-    </div>
-  </div>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="image/logo.png" alt="Guardian Life Logo">
+    <div class="top-bar bg-dark text-white py-2">
+        <div class="container d-flex justify-content-end align-items-center gap-3 top-bar-content">
+            <span class="d-flex align-items-center gap-2"><i class="fas fa-id-card"></i> National License: 20310594</span>
+            <span class="d-flex align-items-center gap-2"><i class="fas fa-envelope"></i> thao.ho@theguardians.life</span>
+            <span class="d-flex align-items-center gap-2"><i class="fas fa-phone"></i> 971-269-8689</span>
+            <div class="lang-switcher">
+                <a href="#" class="text-white">TIẾNG VIỆT</a>
+                <span class="dropdown-arrow text-white">▼</span>
+            </div>
+        </div>
     </div>
-    <ul class="nav-links">
-      <li><a href="#">HOME</a></li>
-      <li><a href="#about">ABOUT US</a></li>
-      <li><a href="#service">SERVICE</a></li>
-      <li><a href="#testimonial">TESTIMONIAL</a></li>
-      <li><a href="#awards">AWARDS</a></li>
-      <li><a href="#answers">YOUR ANSWER</a></li>
-      <li><a href="#contact">CONTACT US</a></li>
-      <li class="lang-switcher">
-        <a href="#">TIẾNG VIỆT</a>
-        <span class="dropdown-arrow">▼</span>
-      </li>
-    </ul>
-  </nav>
 
+    <nav class="navbar navbar-expand-lg bg-white py-3">
+        <div class="container d-flex justify-content-start">
+            <a class="navbar-brand" href="#">
+                <img src="image/logo.png" alt="Guardian Life Logo" height="50" class="d-inline-block align-top logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+                <ul class="navbar-nav nav-links">
+                    <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#service">SERVICE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonial">TESTIMONIAL</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#awards">AWARDS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#answers">YOUR ANSWER</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-text">
-      <h1>THAO HO (HANNAH)</h1>
-      <h2>INDEPENDENT AGENT</h2>
-      <p>Our job is proving you and your family a life time financial protection.</p>
-    </div>
-    <div class="hero-img">
-      <img src="image/thao-ho.png" alt="Thao Ho">
-    </div>
-  </header>
+    <header class="hero py-5 bg-info bg-opacity-10">
+        <div class="container d-flex align-items-center justify-content-center">
+            <div class="hero-text ms-5">
+                <h1 class="display-4 fw-bold">THAO HO (HANNAH)</h1>
+                <h2 class="display-5">INDEPENDENT AGENT</h2>
+                <p class="lead">Our job is proving you and your family a life time financial protection.</p>
+            </div>
+            <div class="hero-img ms-5">
+                <img src="image/thao-ho.png" alt="Thao Ho" class="img-fluid">
+            </div>
+        </div>
+    </header>
 
-  <!-- YOU NEEDS Section -->
-  <section class="you-needs">
-    <h2>YOUR NEEDS</h2>
-    <p>We provide a variety of products tailored to your financial needs.</p>
-    <div class="grid">
-      <div class="card">
-        <div class="badge">01</div>
-        <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
-        <h4>Living with benefits Insurance</h4>
-        <p>We provide a variety of products<br> tailored to your financial needs.</p>
-      </div>      
-      <div class="card">
-        <div class="badge">02</div>
-        <div class="icon"><i class="fas fa-home"></i></div>
-        <h4>Mortgage Protection</h4>
-        <p>We provide a variety of products<br> tailored to your financial needs.</p>
-      </div>
-      <div class="card">
-        <div class="badge">03</div>
-        <div class="icon"><i class="fas fa-graduation-cap"></i></div>
-        <h4>College Funding</h4>
-        <p>We provide a variety of products<br> tailored to your financial needs.</p>
-      </div>
-      <div class="card">
-        <div class="badge">04</div>
-        <div class="icon"><i class="fas fa-infinity"></i></div>
-        <h4>Life Time Income Tax Free</h4>
-        <p>We provide a variety of products<br> tailored to your financial needs.</p>
-      </div>
-    </div>
-  </section>
-  <section class="about-us">
-    <h2>ABOUT US</h2>
-    <p>We provide a variety of products tailored to your financial needs.</p>
-  </section>
-  
-  <section class="your-family-matter">
-    <div class="image-container">
-      <img src="image/your family.png" alt="Hình ảnh gia đình được che chở bởi đôi tay">
-    </div>
-    <div class="content-container">
-      <h2>YOUR FAMILY MATTER</h2>
-      <p>Independent insurance agents with years of experience in financial services.</p>
-      <ul class="protection-list">
-        <li><i class="fas fa-check"></i> Income Protection</li>
-        <li><i class="fas fa-check"></i> Income Protection</li>
-        <li><i class="fas fa-check"></i> Income Protection</li>
-        <li><i class="fas fa-check"></i> Income Protection</li>
-        <li><i class="fas fa-check"></i> Mortgage Protection</li>
-        <li><i class="fas fa-check"></i> Mortgage Protection</li>
-        <li><i class="fas fa-check"></i> Mortgage Protection</li>
-      </ul>
-    </div>
-  </section>
-  
-
-  <!-- SERVICE Section -->
-  <section id="service" class="services">
-    <h2>SERVICE</h2>
-    <p>We provide insurance services</p>
-    <div class="grid">
-      <div class="card">
-        <img src="image/benefits.png" alt="Living With Benefits Insurance">
-        <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
-        <h4>Living With Benefits Insurance</h4>
-        <p>Living benefits protection</p>
-      </div>
-      <div class="card">
-        <img src="image/life.png" alt="Life Insurances">
-        <div class="icon"><i class="fas fa-heartbeat"></i></div>
-        <h4>Life Insurances (IUL, Whole, Life...)</h4>
-        <p>Whole life protection</p>
-      </div>
-      <div class="card">
-        <img src="image/term.png" alt="Term Insurances">
-        <div class="icon"><i class="fas fa-calendar-alt"></i></div>
-        <h4>Term Insurances</h4>
-        <p>10, 20, or 30-year term protection</p>
-      </div>
-      <div class="card">
-        <img src="image/mortgage.png" alt="Mortgage Protection">
-        <div class="icon"><i class="fas fa-home"></i></div>
-        <h4>Mortgage Protection</h4>
-        <p>Asset and income protection</p>
-      </div>
-      <div class="card">
-        <img src="image/college.png" alt="College Funding">
-        <div class="icon"><i class="fas fa-graduation-cap"></i></div>
-        <h4>College Funding</h4>
-        <p>Education savings plans</p>
-      </div>
-      <div class="card">
-        <img src="image/tax free.png" alt="Life time income tax free">
-        <div class="icon"><i class="fas fa-chart-line"></i><i class="fas fa-dollar-sign small-dollar"></i></div>
-        <h4>Life Time Income Tax Free</h4>
-        <p>Tax-free retirement income</p>
-      </div>
-      <div class="card">
-        <img src="image/retirement.png" alt="Retirement Plan">
-        <div class="icon"><i class="fas fa-piggy-bank"></i></div>
-        <h4>Retirement Plan (IRAs, Roth IRAs, Annuities..)</h4>
-        <p>Efficient retirement plans</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- HELP SECTION -->
-  <section class="help-section">
-    <div class="help-container">
-      <div class="help-left">
-        <h2>We are here to<br>help you</h2>
-      </div>
-      <div class="vertical-line"></div>
-      <div class="help-right">
-        <p>We’ll ensure that you focus on the opportunities that maximize all times like Insurance that fixes your problem</p>
-        <div class="help-call">
-          <i class="fas fa-phone-alt"></i>
-          <div>
-            <small>Call For Help?</small>
-            <strong>971-269-8689</strong>
-          </div>
+    <section class="you-needs text-center py-5">
+        <div class="container">
+            <h2 class="display-4 fw-bold">YOUR NEEDS</h2>
+            <p class="lead">We provide a variety of products tailored to your financial needs.</p>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-3">
+                <div class="col">
+                    <div class="card h-100 position-relative">
+                        <div class="badge bg-primary text-white position-absolute top-0 start-0 m-2">01</div>
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <div class="icon"><i class="fas fa-hand-holding-heart fa-3x text-primary"></i></div>
+                            <h4 class="card-title mt-3">Living with benefits Insurance</h4>
+                            <p class="card-text">We provide a variety of products tailored to your financial needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 position-relative">
+                        <div class="badge bg-primary text-white position-absolute top-0 start-0 m-2">02</div>
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <div class="icon"><i class="fas fa-home fa-3x text-primary"></i></div>
+                            <h4 class="card-title mt-3">Mortgage Protection</h4>
+                            <p class="card-text">We provide a variety of products tailored to your financial needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 position-relative">
+                        <div class="badge bg-primary text-white position-absolute top-0 start-0 m-2">03</div>
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <div class="icon"><i class="fas fa-graduation-cap fa-3x text-primary"></i></div>
+                            <h4 class="card-title mt-3">College Funding</h4>
+                            <p class="card-text">We provide a variety of products tailored to your financial needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 position-relative">
+                        <div class="badge bg-primary text-white position-absolute top-0 start-0 m-2">04</div>
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <div class="icon">
+                                <i class="fas fa-infinity fa-3x text-primary position-relative">
+                                    <i class="fas fa-dollar-sign small-dollar"></i>
+                                </i>
+                            </div>
+                            <h4 class="card-title mt-3">Life Time Income Tax Free</h4>
+                            <p class="card-text">We provide a variety of products tailored to your financial needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-  
-
-
-  <!-- TESTIMONIAL Section -->
-  <section id="testimonial" class="testimonial">
-    <h2>TESTIMONIAL</h2>
-    <p>We provide a variety of products tailored to your financial needs.</p>
-    <div class="tabs">
-      <button>Brochures</button>
-      <button>Retirement Plans</button>
-      <button>Testimonies</button>
-    </div>
-    <div class="grid">
-      <div class="card"><img src="image/Universal Life.png" alt="Index Universal Life _ Brochures"><h4></h4><a href="#">Continue Reading →</a></div>
-      <div class="card"><img src="image/Survivor Life.png" alt="Survivor Life _ Buyer's Guide"><h4></h4><a href="#">Continue Reading →</a></div>
-      <div class="card"><img src="image/Survivor_Life.png" alt="Survivor Life _ Brochures"><h4></h4><a href="#">Continue Reading →</a></div>
-      <div class="card"><img src="image/Whole Life.png" alt="Whole Life _ Brochure 1"><h4></h4><a href="#">Continue Reading →</a></div>
-      <div class="card"><img src="image/Whole_Life.png" alt="Whole Life _ Brochure 2"><h4></h4><a href="#">Continue Reading →</a></div>
-      <div class="card"><img src="image/Term Insurance.png" alt="Term Insurance _ Brochure"><h4></h4><a href="#">Continue Reading →</a></div>
-      <div class="card"><img src="image/Living with benefits.png" alt="Living with benefits Insurance Brochure"><h4></h4><a href="#">Continue Reading →</a></div>
-      <div class="card"><img src="image/Annuity Zenith.png" alt="Annuity Zenith Income"><h4></h4><a href="#">Continue Reading →</a></div>
-      <div class="card"><img src="image/Annuity Zenith Growth.png" alt="Annuity_Zenith Growth 7_Brochures"><h4></h4><a href="#">Continue Reading →</a></div>
-      <div class="card"><img src="image/Annuity_Zenith.png" alt="Annuity_Zenith Income 7"><h4></h4><a href="#">Continue Reading →</a></div>
-      <div class="card"><img src="image/Annuity Zenith Growth.png" alt="Annuity_Zenith Growth 5_Brochures"><h4></h4><a href="#">Continue Reading →</a></div>
-      <div class="card"><img src="image/Annuity Zenith Growth Flyer.png" alt="Annuity Zenith Growth Flyer"><h4></h4><a href="#">Continue Reading →</a></div>
-      <div class="card"><img src="image/Annuity_Zenith Growth 10.png" alt="Annuity_Zenith Growth 10_Brochures"><h4></h4><a href="#">Continue Reading →</a></div>
-      <div class="card"><img src="image/Annuity_Zenith Income.png" alt="Annuity_Zenith Income 10"><h4></h4><a href="#">Continue Reading →</a></div>
-    </div>
-  </section>
-
- <!-- Post-Testimonial Section with Thao and Metrics --> 
-<section class="testimonial-follow-up">
-  <div class="agent-profile">
-    <img src="image/thao-ho avatar.png" alt="Agent Name">
-    <div class="agent-info">
-      <h3>THAO HO (HANNAH)</h3>
-      <p>Independent Agent</p>
-    </div>
-  </div>
-
-  <section class="stats-section">
-    <div class="stats-container">
-      <div class="stats-left">
-        <h2><span class="highlight">8.62M+</span> clients experience insurance excellence by us.Trusted services, customer-focused solutions, and a legacy of financial reliability.</h2>
-      </div>
-      <div class="stats-right">
-        <div class="stat-card">
-          <i class="fas fa-globe"></i>
-          <h3>189+ <span>Global Country</span></h3>
-          <p>Placerat vestibulum lectus mauris</p>
-        </div>
-        <div class="stat-card">
-          <i class="fas fa-chart-line"></i>
-          <h3>81+ <span>Growth</span></h3>
-          <p>Placerat vestibulum lectus mauris</p>
-        </div>
-        <div class="stat-card">
-          <i class="fas fa-users"></i>
-          <h3>189+ <span>Satisfied Customers</span></h3>
-          <p>Placerat vestibulum lectus mauris</p>
-        </div>
-        <div class="stat-card">
-          <i class="fas fa-thumbs-up"></i>
-          <h3>500+ <span>Satisfaction Rate</span></h3>
-          <p>Placerat vestibulum lectus mauris</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  </section>
-
-  
-  <section class="awards">
-    <h2>AWARDS</h2>
-    <p>We provide insurance services</p>
-  
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="image/award1.png" alt="Award 1">
-        </div>
-        <div class="swiper-slide">
-          <img src="image/award2.jpg" alt="Award 2">
-        </div>
-        <div class="swiper-slide">
-          <img src="image/award3.jpg" alt="Award 3">
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-  
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="script.js"></script>
-
-  <!-- YOUR ANSWER Section -->
-  <section id="answers" class="answers">
-      <h2>YOUR ANSWER</h2>
-      <p>Frequently asked questions & searching answer.</p>
-      <div class="faq-grid">
-        <div class="faq-card">
-          <div class="faq-question">
-            <span class="icon">?</span>
-            <h3>What is insurance service?</h3>
-            <button class="toggle">-</button>
-          </div>
-          <div class="faq-answer open">
-            <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas dynamically innovate resource.</p>
-          </div>
-        </div>
-    
-        <div class="faq-card">
-          <div class="faq-question">
-            <span class="icon">?</span>
-            <h3>What does insurance entail?</h3>
-            <button class="toggle">-</button>
-          </div>
-          <div class="faq-answer open">
-            <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas dynamically innovate resource.</p>
-          </div>
-        </div>
-    
-        <div class="faq-card">
-          <div class="faq-question">
-            <span class="icon">?</span>
-            <h3>How many services do we provide?</h3>
-            <button class="toggle">+</button>
-          </div>
-          <div class="faq-answer">
-            <p>We provide a variety of insurance services covering health, life, property, and more.</p>
-          </div>
-        </div>
-    
-        <div class="faq-card">
-          <div class="faq-question">
-            <span class="icon">?</span>
-            <h3>What is the experience of our team members?</h3>
-            <button class="toggle">+</button>
-          </div>
-          <div class="faq-answer">
-            <p>Our experienced team brings decades of expertise across multiple insurance categories.</p>
-          </div>
-        </div>
-    
-        <div class="faq-card">
-          <div class="faq-question">
-            <span class="icon">?</span>
-            <h3>Why are we the best company?</h3>
-            <button class="toggle">+</button>
-          </div>
-          <div class="faq-answer">
-            <p>Exceptional service, flexible plans, and customer-focused solutions make us the market leader.</p>
-          </div>
-        </div>
-    
-        <div class="faq-card">
-          <div class="faq-question">
-            <span class="icon">?</span>
-            <h3>How can I cancel my policy?</h3>
-            <button class="toggle">+</button>
-          </div>
-          <div class="faq-answer">
-            <p>You can request a cancellation anytime, subject to applicable terms and conditions.</p>
-          </div>
-        </div>
-    
-        <div class="faq-card">
-          <div class="faq-question">
-            <span class="icon">?</span>
-            <h3>How do I make a claim?</h3>
-            <button class="toggle">+</button>
-          </div>
-          <div class="faq-answer">
-            <p>Contact our support team and we'll guide you through each step of the claim process.</p>
-          </div>
-        </div>
-    
-        <div class="faq-card">
-          <div class="faq-question">
-            <span class="icon">?</span>
-            <h3>What types of policies do you offer?</h3>
-            <button class="toggle">+</button>
-          </div>
-          <div class="faq-answer">
-            <p>We offer life, health, vehicle, property, business, and travel insurance policies.</p>
-          </div>
-        </div>
-      </div>
     </section>
 
-  <!-- GET A FREE ESTIMATE Section (with image) -->
-  <section id="estimate" class="estimate">
-    <div class="estimate-content">
-      <div class="estimate-image">
-        <img src="image/thao-ho.png" alt="Free Estimate">
-      </div>
-      <div class="estimate-text">
-        <h2>GET A FREE ESTIMATE</h2>
-        <p>Get an insurance quote to get started!</p>
-        <form class="estimate-form">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Select type of insurance"></textarea>
-          <div class="balance-limit-container">
-            <label for="balanceSlider">Limits of Balance:</label>
-            <div class="slider-wrapper">
-              <input type="range" id="balanceSlider" min="0" max="700000" value="700000">
-              <div class="slider-track"></div>
-              <div class="slider-thumb"></div>
-            </div>
-          </div>
-          <button type="submit">Get a Quote Now</button>
-        </form>
-      </div>
-    </div>
-  </section>
+    <section id="about" class="about-us text-center py-5 bg-info bg-opacity-10">
+        <div class="container">
+            <h2 class="display-4 fw-bold">ABOUT US</h2>
+            <p class="lead">We provide a variety of products tailored to your financial needs.</p>
+        </div>
+    </section>
 
-  <footer class="footer-section">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-column logo-column">
-          <div class="footer-logo">
-            <img src="image/logo.png" alt="Company Logo">
-            <p>Helping the Asian community in the US have full cover health and financial protection, stable retirement income</p>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa fa-phone"></i>
-            <span>971-229-8689</span>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa fa-envelope"></i>
-            <span>thao.ho@theguardians.life</span>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa fa-map-marker"></i>
-            <span>1424 N Brown Rd #450, Lawrenceville, GA 30043</span>
-          </div>
+    <section class="your-family-matter py-5 bg-info bg-opacity-10">
+        <div class="container d-flex flex-column flex-lg-row align-items-center gap-4">
+            <div class="image-container flex-grow-1">
+                <img src="image/your family.png" alt="Hình ảnh gia đình được che chở bởi đôi tay" class="img-fluid">
+            </div>
+            <div class="content-container flex-grow-1">
+                <h2 class="display-5 fw-bold">YOUR FAMILY MATTER</h2>
+                <p class="lead">Independent insurance agents with years of experience in financial services.</p>
+                <ul class="protection-list list-unstyled">
+                    <li><i class="fas fa-check text-success"></i> Income Protection</li>
+                    <li><i class="fas fa-check text-success"></i> Income Protection</li>
+                    <li><i class="fas fa-check text-success"></i> Income Protection</li>
+                    <li><i class="fas fa-check text-success"></i> Income Protection</li>
+                    <li><i class="fas fa-check text-success"></i> Mortgage Protection</li>
+                    <li><i class="fas fa-check text-success"></i> Mortgage Protection</li>
+                    <li><i class="fas fa-check text-success"></i> Mortgage Protection</li>
+                </ul>
+            </div>
         </div>
-  
-        <!-- Center column -->
-        <div class="footer-column services-column">
-          <h3>Services</h3>
-          <ul>
-            <li><a href="#">Living With Benefits Insurance</a></li>
-            <li><a href="#">Life Insurances (IUL, Whole, Life...)</a></li>
-            <li><a href="#">Term Insurances</a></li>
-            <li><a href="#">Mortgage Protection</a></li>
-            <li><a href="#">College Funding</a></li>
-            <li><a href="#">Life Time Income Tax Free</a></li>
-            <li><a href="#">Retirement Plan (IRAs, Roth IRAs, Annuities..)</a></li>
-          </ul>
+    </section>
+
+
+    <section id="service" class="services text-center py-5">
+        <div class="container">
+            <h2 class="display-4 fw-bold">SERVICE</h2>
+            <p class="lead">We provide insurance services</p>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3">
+                <div class="col">
+                    <div class="card h-100 service-card">
+                        <img src="image/benefits.png" alt="Living With Benefits Insurance" class="card-img-top">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <div class="icon"><i class="fas fa-hand-holding-usd fa-2x text-primary"></i></div>
+                            <h4 class="card-title mt-3">Living With Benefits Insurance</h4>
+                            <p class="card-text">Living benefits protection</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 service-card">
+                        <img src="image/life.png" alt="Life Insurances" class="card-img-top">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <div class="icon"><i class="fas fa-heartbeat fa-2x text-primary"></i></div>
+                            <h4 class="card-title mt-3">Life Insurances (IUL, Whole, Life...)</h4>
+                            <p class="card-text">Whole life protection</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 service-card">
+                        <img src="image/term.png" alt="Term Insurances" class="card-img-top">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <div class="icon"><i class="fas fa-calendar-alt fa-2x text-primary"></i></div>
+                            <h4 class="card-title mt-3">Term Insurances</h4>
+                            <p class="card-text">10, 20, or 30-year term protection</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 service-card">
+                        <img src="image/mortgage.png" alt="Mortgage Protection" class="card-img-top">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <div class="icon"><i class="fas fa-home fa-2x text-primary"></i></div>
+                            <h4 class="card-title mt-3">Mortgage Protection</h4>
+                            <p class="card-text">Asset and income protection</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 service-card">
+                        <img src="image/college.png" alt="College Funding" class="card-img-top">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <div class="icon"><i class="fas fa-graduation-cap fa-2x text-primary"></i></div>
+                            <h4 class="card-title mt-3">College Funding</h4>
+                            <p class="card-text">Education savings plans</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 service-card">
+                        <img src="image/tax free.png" alt="Life time income tax free" class="card-img-top">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <div class="icon">
+                                <i class="fas fa-chart-line fa-2x text-primary position-relative">
+                                    <i class="fas fa-dollar-sign small-dollar"></i>
+                                </i>
+                            </div>
+                            <h4 class="card-title mt-3">Life Time Income Tax Free</h4>
+                            <p class="card-text">Tax-free retirement income</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 service-card">
+                        <img src="image/retirement.png" alt="Retirement Plan" class="card-img-top">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <div class="icon"><i class="fas fa-piggy-bank fa-2x text-primary"></i></div>
+                            <h4 class="card-title mt-3">Retirement Plan (IRAs, Roth IRAs, Annuities..)</h4>
+                            <p class="card-text">Efficient retirement plans</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-  
-        <!-- Right column -->
-        <div class="footer-column right-column">
-          <h3>Follow Us</h3>
-          <div class="footer-social">
-            <a href="#"><i class="fa-brands fa-threads"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          </div>
-          <div class="footer-map">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0860909741976!2d-122.41941538468084!3d37.77492977975978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b5e17db%3A0x6d2b8f8d2f8b1d6c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1616906108254!5m2!1sen!2s"
-              width="100%" height="200" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy">
-            </iframe>
-          </div>
-          <form class="footer-subscribe">
-            <input type="email" id="email" name="email" placeholder="Enter your email">
-            <button type="submit">→</button>
-          </form>
+    </section>
+
+    <section class="help-section py-5 bg-primary text-white">
+        <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-center gap-4">
+            <div class="help-left">
+                <h2 class="display-5 fw-bold">We are here to<br>help you</h2>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="help-right">
+                <p class="lead">We’ll ensure that you focus on the opportunities that maximize all times like Insurance
+                    that fixes your problem</p>
+                <div class="help-call d-flex align-items-center gap-3">
+                    <i class="fas fa-phone-alt fa-2x"></i>
+                    <div>
+                        <small class="text-white-50">Call For Help?</small>
+                        <strong class="text-white">971-269-8689</strong>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </footer>
+    </section>
+
+
+    <section id="testimonial" class="testimonial text-center py-5">
+        <div class="container">
+            <h2 class="display-4 fw-bold">TESTIMONIAL</h2>
+            <p class="lead">We provide a variety of products tailored to your financial needs.</p>
+            <div class="tabs d-flex justify-content-center gap-2 mb-4">
+                <button class="btn btn-outline-secondary">Brochures</button>
+                <button class="btn btn-outline-secondary">Retirement Plans</button>
+                <button class="btn btn-outline-secondary">Testimonies</button>
+            </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/Universal Life.png" alt="Index Universal Life _ Brochures" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <a href="#" class="btn btn-link">Continue Reading →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/Survivor Life.png" alt="Survivor Life _ Buyer's Guide" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <a href="#" class="btn btn-link">Continue Reading →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/Survivor_Life.png" alt="Survivor Life _ Brochures" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <a href="#" class="btn btn-link">Continue Reading →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/Whole Life.png" alt="Whole Life _ Brochure 1" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <a href="#" class="btn btn-link">Continue Reading →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/Whole_Life.png" alt="Whole Life _ Brochure 2" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <a href="#" class="btn btn-link">Continue Reading →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/Term Insurance.png" alt="Term Insurance _ Brochure" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <a href="#" class="btn btn-link">Continue Reading →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/Living with benefits.png" alt="Living with benefits Insurance Brochure"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <a href="#" class="btn btn-link">Continue Reading →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/Annuity Zenith.png" alt="Annuity Zenith Income" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <a href="#" class="btn btn-link">Continue Reading →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/Annuity Zenith Growth.png" alt="Annuity_Zenith Growth 7_Brochures"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <a href="#" class="btn btn-link">Continue Reading →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/Annuity_Zenith.png" alt="Annuity_Zenith Income 7" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <a href="#" class="btn btn-link">Continue Reading →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/Annuity Zenith Growth.png" alt="Annuity_Zenith Growth 5_Brochures"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <a href="#" class="btn btn-link">Continue Reading →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/Annuity Zenith Growth Flyer.png" alt="Annuity Zenith Growth Flyer"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <a href="#" class="btn btn-link">Continue Reading →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/Annuity_Zenith Growth 10.png" alt="Annuity_Zenith Growth 10_Brochures"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <a href="#" class="btn btn-link">Continue Reading →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="image/Annuity_Zenith Income.png" alt="Annuity_Zenith Income 10" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <a href="#" class="btn btn-link">Continue Reading →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-follow-up py-5 bg-light">
+        <div class="container">
+            <div class="d-flex align-items-center mb-4">
+                <img src="image/thao-ho avatar.png" alt="Agent Name" class="rounded-circle me-3" width="100" height="100">
+                <div class="agent-info">
+                    <h3>THAO HO (HANNAH)</h3>
+                    <p class="mb-0">Independent Agent</p>
+                </div>
+            </div>
+
+            <section class="stats-section">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2><span class="highlight">8.62M+</span> clients experience insurance excellence by
+                            us.Trusted services, customer-focused solutions, and a legacy of financial reliability.</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                            <div class="col">
+                                <div class="card h-100 stat-card text-center">
+                                    <div class="card-body">
+                                        <i class="fas fa-globe fa-2x"></i>
+                                        <h3 class="card-title">189+ <span>Global Country</span></h3>
+                                        <p class="card-text">Placerat vestibulum lectus mauris</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100 stat-card text-center">
+                                    <div class="card-body">
+                                        <i class="fas fa-chart-line fa-2x"></i>
+                                        <h3 class="card-title">81+ <span>Growth</span></h3>
+                                        <p class="card-text">Placerat vestibulum lectus mauris</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100 stat-card text-center">
+                                    <div class="card-body">
+                                        <i class="fas fa-users fa-2x"></i>
+                                        <h3 class="card-title">189+ <span>Satisfied Customers</span></h3>
+                                        <p class="card-text">Placerat vestibulum lectus mauris</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100 stat-card text-center">
+                                    <div class="card-body">
+                                        <i class="fas fa-thumbs-up fa-2x"></i>
+                                        <h3 class="card-title">500+ <span>Satisfaction Rate</span></h3>
+                                        <p class="card-text">Placerat vestibulum lectus mauris</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <section class="awards py-5 text-center">
+        <div class="container">
+            <h2 class="mb-4">AWARDS</h2>
+            <p class="lead">We provide insurance services</p>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="image/award1.png" alt="Award 1" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="image/award2.jpg" alt="Award 2" class="img-fluid">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="image/award3.jpg" alt="Award 3" class="img-fluid">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <section id="answers" class="answers py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">YOUR ANSWER</h2>
+            <p class="lead text-center">Frequently asked questions & searching answer.</p>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <span class="me-3">?</span>
+                            What is insurance service?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Completely synergize resource taxing relationships via premier niche markets.
+                            Professionally cultivate one-to-one customer service with robust ideas dynamically
+                            innovate resource.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <span class="me-3">?</span>
+                            What does insurance entail?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Completely synergize resource taxing relationships via premier niche markets.
+                            Professionally cultivate one-to-one customer service with robust ideas dynamically
+                            innovate resource.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <span class="me-3">?</span>
+                            How many services do we provide?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We provide a variety of insurance services covering health, life, property, and more.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <span class="me-3">?</span>
+                            What is the experience of our team members?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our experienced team brings decades of expertise across multiple insurance categories.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <span class="me-3">?</span>
+                            Why are we the best company?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Exceptional service, flexible plans, and customer-focused solutions make us the market
+                            leader.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            <span class="me-3">?</span>
+                            How can I cancel my policy?
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You can request a cancellation anytime, subject to applicable terms and conditions.
+                        </div>
+                    </div>
+                </div>
+    
+        <section id="answers" class="answers py-5 bg-light">
+        <div class="container">
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <span class="me-2">?</span>
+                            How do I make a claim?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Contact our support team and we'll guide you through each step of the claim process.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <span class="me-2">?</span>
+                            What types of policies do you offer?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We offer life, health, vehicle, property, business, and travel insurance policies.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="estimate" class="estimate py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="image/thao-ho.png" alt="Free Estimate" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h2>GET A FREE ESTIMATE</h2>
+                    <p class="lead">Get an insurance quote to get started!</p>
+                    <form class="estimate-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Type of Insurance</label>
+                            <textarea class="form-control" name="message" placeholder="Select type of insurance"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="balanceSlider" class="form-label">Limits of Balance:</label>
+                            <div class="slider-wrapper">
+                                <input type="range" class="form-range" id="balanceSlider" min="0" max="700000"
+                                    value="700000">
+                                <div class="slider-track"></div>
+                                <div class="slider-thumb"></div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Get a Quote Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-logo">
+                        <img src="image/logo.png" alt="Company Logo" height="50">
+                        <p class="mt-3">Helping the Asian community in the US have full cover health and financial
+                            protection, stable retirement income</p>
+                    </div>
+                    <div class="footer-contact-item d-flex align-items-center gap-2">
+                        <i class="fa fa-phone"></i>
+                        <span>971-229-8689</span>
+                    </div>
+                    <div class="footer-contact-item d-flex align-items-center gap-2">
+                        <i class="fa fa-envelope"></i>
+                        <span>thao.ho@theguardians.life</span>
+                    </div>
+                    <div class="footer-contact-item d-flex align-items-center gap-2">
+                        <i class="fa fa-map-marker"></i>
+                        <span>1424 N Brown Rd #450, Lawrenceville, GA 30043</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3>Services</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Living With Benefits Insurance</a></li>
+                        <li><a href="#" class="text-white">Life Insurances (IUL, Whole, Life...)</a></li>
+                        <li><a href="#" class="text-white">Term Insurances</a></li>
+                        <li><a href="#" class="text-white">Mortgage Protection</a></li>
+                        <li><a href="#" class="text-white">College Funding</a></li>
+                        <li><a href="#" class="text-white">Life Time Income Tax Free</a></li>
+                        <li><a href="#" class="text-white">Retirement Plan (IRAs, Roth IRAs, Annuities..)</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h3>Follow Us</h3>
+                    <div class="footer-social">
+                        <a href="#" class="text-white me-2"><i class="fa-brands fa-threads fa-lg"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fa-brands fa-tiktok fa-lg"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fa-brands fa-youtube fa-lg"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                    </div>
+                    <div class="footer-map mt-3">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0860909741976!2d-122.41941538468084!3d37.77492977975978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b5e17db%3A0x6d2b8f8d2f8b1d6c!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1616906108254!5m2!1sen!2s"
+                            width="100%" height="200" style="border:0; border-radius: 8px;" allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <form class="footer-subscribe mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Enter your email">
+                            <button class="btn btn-primary" type="submit">→</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
   
   
   
