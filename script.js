@@ -38,3 +38,10 @@ document.querySelectorAll('.faq-card .toggle').forEach(button => {
     button.textContent = answer.classList.contains('open') ? '-' : '+';
   });
 });
+document.querySelectorAll('.continue-reading-link').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Ngăn hành vi mặc định của liên kết
+        // Thêm chức năng của bạn ở đây (ví dụ: mở modal)
+        alert("Continue Reading clicked!"); 
+    });
+});
