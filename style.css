@@ -49,24 +49,28 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between; /* Quan trọng */
     background: #ffffff;
     color: #000000;
-    gap: 25px;
     position: relative;
     padding: 5px 50px;
-    padding-left: 100px; /* Adjusted padding-left */
+    padding-left: 100px;
 }
 
-.navbar .logo {
+.navbar .container {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    margin-right: 20px;
+    width: 100%;
 }
 
-.navbar .logo img {
+.navbar .navbar-brand { /* Sử dụng chính xác selector này */
+    margin-right: auto; /* Đẩy logo sang trái */
+}
+
+.navbar .navbar-brand img {
     height: auto;
-    max-height: 50px;
+    max-height: 70px;
     width: auto;
     display: block;
     filter: brightness(0) saturate(100%) invert(22%) sepia(92%) saturate(3250%)
@@ -76,9 +80,10 @@ body {
 .navbar .nav-links {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 15px;
     align-items: center;
-    margin-left: 0;
+    margin-left: auto; /* Đẩy menu sang phải */
+    margin-right: 10px; /* Thêm khoảng cách nhỏ */
 }
 
 .navbar .nav-links li a {
@@ -90,108 +95,67 @@ body {
 
 /* Hero Section */
 .hero {
-    display: flex;
-    align-items: center;
-    padding: 30px 15px;
     background-color: #d4f8ff;
-    justify-content: center;
-    flex-wrap: wrap; /* Added flex-wrap */
+    padding-top: 2rem; /* Sử dụng rem cho khả năng mở rộng tốt hơn */
+    padding-bottom: 2rem;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column; /* Chuyển flex direction thành column */
+    align-items: center;    /* Căn giữa theo chiều ngang */
+    text-align: center;     /* Căn giữa chữ */
 }
 
 .hero-text {
-    margin-left: 30px;
-    flex: 1 1 400px; /* Added flex basis */
+    margin-bottom: 1.5rem; /* Thêm khoảng cách bên dưới phần chữ */
 }
 
 .hero-text h1 {
-    font-size: 60px;
-    margin-bottom: 10px;
+    font-size: 2rem;       /* Giảm kích thước chữ trên điện thoại */
+    font-weight: bold;
 }
 
 .hero-text h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.hero-text p {
-    font-size: 22px;
-    line-height: 1.6;
+    font-size: 1.2rem;
 }
 
 .hero-img {
-    width: auto; /* Changed width to auto */
-    max-width: 50%; /* Added max-width */
-    text-align: right;
-    margin-left: 30px;
-    flex: 1 1 300px; /* Added flex basis */
+    text-align: center;    /* Căn giữa ảnh */
 }
 
 .hero-img img {
-    max-width: 100%;
+    max-width: 100%;       /* Ảnh không được vượt quá chiều rộng của container */
     height: auto;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted minmax */
-    gap: 20px;
-    margin-top: 30px;
-}
+/* Media query cho màn hình lớn hơn */
+@media (min-width: 768px) {
+    .hero .container {
+        flex-direction: row; /* Trở lại bố cục hàng trên màn hình lớn */
+        justify-content: center;
+        text-align: left;    /* Trở lại căn lề trái cho chữ */
+    }
 
-.card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
+    .hero-text {
+        flex: 1;
+        margin-bottom: 0;   /* Loại bỏ khoảng cách bên dưới phần chữ */
+        margin-right: 1.5rem; /* Thay thế ms-5 bằng khoảng cách linh hoạt hơn */
+    }
 
-.card img {
-    width: 100%;
-    height: auto; /* Changed height to auto */
-    max-height: 300px; /* Added max-height */
-    object-fit: cover;
-    border-radius: 10px 10px 0 0; /* Adjusted border-radius */
-    margin-bottom: 15px;
-}
+    .hero-text h1 {
+        font-size: 2.5rem;   /* Trở lại kích thước chữ ban đầu */
+    }
 
-.card .card-content {
-    padding: 15px;
-    flex: 1; /* Added flex: 1 to push content to the bottom */
-}
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
 
-.card .icon {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.card h4 {
-    font-size: 16px;
-    margin: 10px 0;
-}
-
-.card p {
-    font-size: 14px;
-    color: #666;
-}
-
-.card .badge {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 70px;
-    height: 70px;
-    background-color: #007bff;
-    color: #fff;
-    border-bottom-left-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: bold;
+    .hero-img {
+        flex: 1;
+        text-align: right;   /* Trở lại căn lề phải cho ảnh */
+        margin-left: 1.5rem; /* Thay thế ms-5 bằng khoảng cách linh hoạt hơn */
+    }
 }
 
 /* YOU NEEDS */
@@ -226,36 +190,36 @@ body {
     background: #fff;
     padding: 20px;
     display: flex;
-    flex-direction: column; /* Added */
+    flex-direction: column;
 }
 
 .you-needs .card .icon {
-    font-size: 2.5em;
+    font-size: 2em;  /* Giảm kích thước icon */
     color: #007bff;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Giảm khoảng cách */
 }
 
 .you-needs .card .badge {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 80px;
-    height: 80px;
+    top: 0.5rem;   /* Điều chỉnh vị trí */
+    right: 0.5rem;  /* Điều chỉnh vị trí */
+    width: 25px;   /* Giảm kích thước badge */
+    height: 25px;  /* Giảm kích thước badge */
     background-color: #007bff;
     color: #fff;
-    border-bottom-left-radius: 50px;
+    border-radius: 50%; /* Thay đổi thành hình tròn */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2em;
+    font-size: 0.75rem; /* Giảm kích thước số */
     font-weight: bold;
 }
 
 .you-needs .card h4 {
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin-top: 5px;    /* Giảm khoảng cách */
+    margin-bottom: 8px; /* Giảm khoảng cách */
     color: #333;
-    font-size: 1.2em;
+    font-size: 1rem;    /* Giảm kích thước tiêu đề */
 }
 
 .you-needs .card p {
@@ -264,7 +228,7 @@ body {
     line-height: 1.5;
     text-align: left;
     width: 100%;
-    flex: 1; /* Added */
+    flex: 1;
 }
 
 /* Kiểu dáng đặc biệt cho icon "Life Time Income Tax Free" */
@@ -272,13 +236,6 @@ body {
     position: relative;
 }
 
-.you-needs .card .icon .small-dollar {
-    font-size: 0.8em;
-    position: absolute;
-    top: 60%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-}
 
 /* ABOUT US */
 .about-us {
@@ -599,254 +556,249 @@ body {
 
 /* testimonial follow-up */
 .testimonial-follow-up {
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
-  background: #f4f4f4;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background: #f4f4f4;
+    gap: 20px;
+}
+
+.testimonial-follow-up .container {
+    display: flex; /* Thêm để căn chỉnh row */
+    flex-direction: column; /* Thêm để căn chỉnh row */
 }
 
 .testimonial-follow-up .top {
-  display: flex;
-  width: 100%;
-  gap: 40px;
-  align-items: center;
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    align-items: center;
 }
 
 .testimonial-follow-up .top .left {
-  flex: 1;
-  text-align: center;
+    flex: 1;
+    text-align: center;
 }
 
 .testimonial-follow-up .top .left img {
-  width: 200px;
-  border-radius: 50%;
+    width: 200px;
+    border-radius: 50%;
 }
 
 .testimonial-follow-up .top .right {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
 }
 
 .testimonial-follow-up .top .right p {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .testimonial-follow-up .top .right .stat-highlight {
-  color: #007BFF;
-  font-weight: bold;
-  display: inline-block;
-  margin-left: 5px;
+    color: #007BFF;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 5px;
 }
 
-.testimonial-follow-up .stats-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
-  width: 100%;
+.testimonial-follow-up .stats-section {
+    padding: 50px;
+    background: #dcfffe;
 }
 
-.stats-section {
-  padding: 50px;
-  background: #f9f9f9;
+.testimonial-follow-up .stats-section .row {
+    display: flex; /* Thêm để căn chỉnh col-md-6 */
+    align-items: center; /* Thêm để căn chỉnh col-md-6 */
+    height: 100%; /* Thêm để căn chỉnh col-md-6 */
 }
 
-.stats-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+.testimonial-follow-up .stats-section .col-md-6 {
+    display: flex; /* Thêm flexbox */
+    align-items: center; /* Căn giữa theo chiều dọc */
 }
 
-.stats-left {
-  flex: 1;
-  min-width: 300px;
+.testimonial-follow-up .stats-section .col-md-6 h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-.stats-left h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+.testimonial-follow-up .stats-section .col-md-6 .highlight {
+    color: #007bff;
+    font-weight: bold;
 }
 
-.stats-left .highlight {
-  color: #007bff;
-  font-weight: bold;
+.testimonial-follow-up .stats-section .col-md-6 p {
+    font-size: 16px;
 }
 
-.stats-left p {
-  font-size: 16px;
+.testimonial-follow-up .stats-section .stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.stats-right {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  min-width: 300px;
+.testimonial-follow-up .stat-card {
+    background: #e6f7fb;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.stat-card {
-  background: #e6f7fb;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+.testimonial-follow-up .stat-card i {
+    font-size: 28px;
+    color: #007bff;
+    margin-bottom: 10px;
 }
 
-.stat-card i {
-  font-size: 28px;
-  color: #007bff;
-  margin-bottom: 10px;
+.testimonial-follow-up .stat-card h3 {
+    font-size: 20px;
+    margin: 5px 0;
 }
 
-.stat-card h3 {
-  font-size: 20px;
-  margin: 5px 0;
+.testimonial-follow-up .stat-card h3 span {
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
 }
 
-.stat-card h3 span {
-  display: block;
-  font-size: 16px;
-  font-weight: normal;
-}
-
-.stat-card p {
-  font-size: 14px;
-  color: #333;
+.testimonial-follow-up .stat-card p {
+    font-size: 14px;
+    color: #333;
 }
 
 
 @media (max-width: 768px) {
-  .testimonial-follow-up .top {
-    flex-direction: column;
-    text-align: center;
-  }
+    .testimonial-follow-up .top {
+        flex-direction: column;
+        text-align: center;
+    }
 
-  .testimonial-follow-up .top .right {
-    margin-top: 20px;
-  }
+    .testimonial-follow-up .top .right {
+        margin-top: 20px;
+    }
 
-  .testimonial-follow-up .stats-grid {
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
+    .testimonial-follow-up .stats-grid {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
 }
+
 .agent-profile {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .agent-profile img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #ddd;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ddd;
 }
 
 .agent-info {
-  text-align: left;
+    text-align: left;
 }
 
 .agent-info h3 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: bold;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .agent-info p {
-  margin: 2px 0 0;
-  font-size: 14px;
-  color: #777;
+    margin: 2px 0 0;
+    font-size: 14px;
+    color: #777;
 }
 
 /* Thêm phần counter section */
 .counter-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px 20px;
-  background-color: #f9f9f9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
 }
 
 .counter-text {
-  flex: 1;
-  max-width: 500px;
-  text-align: left;
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
 }
 
 .counter-text h2 {
-  font-size: 36px;
-  color: #004aad;
-  margin-bottom: 10px;
+    font-size: 36px;
+    color: #004aad;
+    margin-bottom: 10px;
 }
 
 .counter-text p {
-  font-size: 18px;
-  color: #333;
+    font-size: 18px;
+    color: #333;
 }
 
 .counter-boxes {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .counter-box {
-  background-color: #e6f8fc;
-  padding: 20px;
-  flex: 0 0 calc(50% - 20px);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    background-color: #e6f8fc;
+    padding: 20px;
+    flex: 0 0 calc(50% - 20px);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .counter-box i {
-  font-size: 36px;
-  color: #007acc;
+    font-size: 36px;
+    color: #007acc;
 }
 
 .counter-box .counter-info {
-  flex: 1;
+    flex: 1;
 }
 
 .counter-box .counter-info h3 {
-  font-size: 20px;
-  margin: 0;
-  color: #333;
+    font-size: 20px;
+    margin: 0;
+    color: #333;
 }
 
 .counter-box .counter-info p {
-  margin: 5px 0 0;
-  font-size: 14px;
-  color: #666;
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
 }
 
 @media (max-width: 768px) {
-  .counter-section {
-    flex-direction: column;
-    text-align: center;
-  }
+    .counter-section {
+        flex-direction: column;
+        text-align: center;
+    }
 
-  .counter-text {
-    max-width: 100%;
-    margin-bottom: 30px;
-  }
+    .counter-text {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
 
-  .counter-box {
-    flex: 0 0 100%;
-  }
+    .counter-box {
+        flex: 0 0 100%;
+    }
 }
 
 /* AWARDS */
@@ -1056,288 +1008,207 @@ section p {
 
 
 /* Footer */
-.footer-logo img {
-  max-width: 150px;
-  display: block;
-  margin: 20px auto 0;
-}
-.follow-us-icons a {
-  display: inline-block; /* To control spacing and size */
-  margin-right: 10px;
-  font-size: 24px; /* Adjust size as needed */
-  color: white; /* Adjust color as needed */
-  text-decoration: none; /* Remove underlines from links */
-}
-
 .footer-section {
-  background-color: #052733;
-  color: #fff;
-  padding: 60px 20px;
+    background-color: #052733;
+    color: #fff;
+    padding: 60px 20px;
 }
 
 .footer-section .footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space out columns */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.footer-section .footer-column {
-  flex: 1 1 250px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.footer-column {
+    flex: 1 1 250px; /* Distribute space, min width */
+    margin-bottom: 30px; /* Spacing between columns, especially on smaller screens */
+}
+
+/* Logo Column */
+.footer-column.logo-column {
+    background-color: #073646;
+    border-radius: 4px;
+    padding: 30px 20px;
+}
+
+.footer-logo img {
+    height: auto;
+    max-height: 150px; /* Tăng kích thước logo */
+    width: auto;
+    display: block;
+    margin-left: auto; /* Căn giữa logo */
+    margin-right: auto; /* Căn giữa logo */
 }
 
 .footer-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.footer-logo img {
-  max-width: 150px;
-  margin-bottom: 10px;
+    text-align: center; /* Căn giữa logo trong div */
 }
 
 .footer-logo p {
-  text-align: left; /* Đảm bảo nội dung căn lề trái */
-  color: #ccc;
-  font-size: 14px;
-  line-height: 1.6;
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-
+/* Contact Info */
 .footer-contact-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  color: #ccc;
-  font-size: 14px;
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    gap: 12px;
+    color: #ccc;
+    font-size: 14px;
+    margin-bottom: 10px; /* Spacing between items */
 }
 
 .footer-contact-item i {
-  font-size: 18px;
-  color: #29abe2;
-  padding-top: 3px;
+    font-size: 20px;
+    background-color: #29abe2;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
 }
 
 .footer-contact-item span {
-  display: block;
+    display: block; /* Ensure proper spacing */
 }
 
+.footer-contact-item strong {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Lists (Services, etc.) */
 .footer-section .footer-column h4 {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: #fff;
-  text-transform: uppercase;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 15px; /* Spacing before list */
 }
 
 .footer-section .footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-section .footer-column ul li {
-  margin-bottom: 10px;
-  font-size: 14px;
-  color: #ccc;
+    margin-bottom: 12px;
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 .footer-section .footer-column ul li a {
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s;
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 .footer-section .footer-column ul li a:hover {
-  color: #fff;
+    color: #fff;
 }
 
+/* Social Icons */
 .footer-social {
-  display: flex;
-  gap: 12px;
-  margin-top: 10px;
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
 }
 
 .footer-social a {
-  color: #ccc;
-  font-size: 18px;
-  transition: color 0.3s;
+    display: inline-flex; /* Use inline-flex for better control */
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ccc;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .footer-social a:hover {
-  color: #fff;
+    background-color: #29abe2;
+    color: #fff;
 }
 
+/* Map */
 .footer-map iframe {
-  width: 100%;
-  height: 200px;
-  border: 0;
-  border-radius: 8px;
+    width: 100%;
+    height: 180px;
+    border: 0;
+    border-radius: 12px;
 }
 
+/* Subscribe */
 .footer-subscribe {
-  display: flex;
-  margin-top: 10px;
+    display: flex;
+    margin-top: 10px;
 }
 
 .footer-subscribe input[type="email"] {
-  flex: 1;
-  padding: 10px;
-  border: none;
-  border-radius: 4px 0 0 4px;
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    font-size: 14px;
 }
 
 .footer-subscribe button {
-  padding: 10px 15px;
-  border: none;
-  background-color: #29abe2;
-  color: #fff;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    padding: 12px 16px;
+    border: none;
+    background-color: #29abe2;
+    color: #fff;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .footer-subscribe button:hover {
-  background-color: #219bd1;
+    background-color: #219bd1;
 }
 
+/* Bottom Bar */
 .footer-section .footer-bottom {
-  margin-top: 40px;
-  font-size: 14px;
-  color: #ccc;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 20px;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .footer-section .footer-content {
-    flex-direction: column;
+    margin-top: 40px;
+    padding-top: 20px;
     text-align: center;
-  }
-
-  .footer-section .footer-column {
-    flex: 1 1 100%;
-    align-items: center;
-  }
-
-  .footer-subscribe {
-    flex-direction: column;
-  }
-
-  .footer-subscribe input[type="email"],
-  .footer-subscribe button {
-    border-radius: 4px;
-    width: 100%;
-    margin-top: 10px;
-  }
-}
- /* Logo Column: Logo căn trái, thông tin căn trái */
-.footer-column.logo-column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Logo và thông tin căn trái */
-  text-align: left;
-  padding: 30px 20px;
-  background-color: #073646;
-  border-radius: 4px;
-  max-width: 300px;
+    font-size: 14px;
+    color: #ccc;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-logo img {
-  max-width: 150px;
-  margin-bottom: 10px;
-}
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .footer-section .footer-content {
+        flex-direction: column; /* Stack columns vertically */
+        text-align: center;
+    }
 
-.footer-logo p {
-  color: #ccc;
-  font-size: 14px;
-  line-height: 1.6;
-}
+    .footer-column {
+        width: 100%; /* Full width on small screens */
+        text-align: center; /* Center content */
+    }
 
+    .footer-column.logo-column {
+        align-items: center; /* Center logo */
+        text-align: center;
+    }
 
-.footer-section .footer-contact-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #ccc;
-  font-size: 14px;
-  justify-content: flex-start;
-}
+    .footer-subscribe {
+        flex-direction: column; /* Stack input and button */
+    }
 
-.footer-section .footer-contact-item i {
-  font-size: 20px;
-  background-color: #29abe2;
-  padding: 10px;
-  border-radius: 8px;
-  color: white;
-}
-
-.footer-section .footer-contact-item span {
-  color: #ccc;
-  font-size: 14px;
-  display: block;
-}
-
-.footer-section .footer-contact-item strong {
-  display: block;
-  color: #fff;
-  font-size: 14px;
-}
-
-.footer-section .footer-content {
-  align-items: flex-start;
-}
-
-/* Chỉnh services list cho gọn đẹp */
-.footer-section .footer-column ul li {
-  margin-bottom: 12px;
-  color: #ccc;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-/* Chỉnh map khung bo tròn đều */
-.footer-map iframe {
-  width: 100%;
-  height: 180px;
-  border: 0;
-  border-radius: 12px;
-}
-
-/* Chỉnh subscribe input */
-.footer-subscribe input[type="email"] {
-  padding: 12px;
-  border-radius: 8px 0 0 8px;
-  font-size: 14px;
-}
-
-.footer-subscribe button {
-  padding: 12px 16px;
-  border-radius: 0 8px 8px 0;
-  font-size: 16px;
-}
-
-/* Icon social chỉnh hover rõ hơn */
-.footer-social a {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s;
-}
-
-.footer-social a:hover {
-  background-color: #29abe2;
-  color: #fff;
+    .footer-subscribe input[type="email"],
+    .footer-subscribe button {
+        border-radius: 8px;
+        width: 100%;
+        margin-top: 10px;
+    }
 }
