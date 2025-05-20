@@ -850,147 +850,120 @@ body {
   opacity: 1;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    color: #007bff; /* Màu của nút */
-    position: absolute;
-    top: 50%;
-    width: 30px;
-    height: 30px;
-    margin-top: -15px;
-    z-index: 10;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.swiper-button-prev {
-    left: 10px; /* Vị trí bên trái */
-}
-
-.swiper-button-next {
-    right: 10px; /* Vị trí bên phải */
-}
-
-@media (max-width: 768px) {
-    .swiper-button-next,
-    .swiper-button-prev {
-        display: none; /* Ẩn nút trên màn hình nhỏ */
-    }
-}
 
 /* Phần Your Answer */
 .answers {
-    background-color: #ADD8E6; /* Màu xanh dương nhạt */
-    padding: 20px;
-    border-radius: 8px;
+  background-color: #ADD8E6; /* Màu xanh dương nhạt */
+  padding: 20px;
+  border-radius: 8px;
 }
 
 /* FAQ Section */
 .faq-section {
-    background: #007bff;
-    color: #ffffff;
-    padding: 60px 20px;
-    text-align: center;
+  background: #007bff;
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .faq-section h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
 .faq-section p {
-    font-size: 18px;
-    margin-bottom: 40px;
+  font-size: 18px;
+  margin-bottom: 40px;
 }
 
 /* FAQ Grid: Hiển thị 2 hàng, mỗi hàng 4 câu hỏi */
 .faq-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Bố cục 2x4 */
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Bố cục 2x4 */
+  gap: 20px;
 }
 
 /* FAQ Card */
 .faq-card {
-    background: #ffffff;
-    color: #333;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: left; /* Căn trái nội dung */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Thêm transition */
-}
-
-.faq-card:hover {
-    transform: translateY(-2px); /* Nhấc nhẹ lên */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Tăng độ bóng */
+  background: #ffffff;
+  color: #333;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left; /* Căn trái nội dung */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Định dạng hai mục đầu tiên */
 .faq-card.full-width {
-    grid-column: span 2; /* Hai mục đầu tiên chiếm đủ chiều rộng */
+  grid-column: span 2; /* Hai mục đầu tiên chiếm đủ chiều rộng */
 }
 
 
 /* Định dạng câu hỏi */
 .faq-question {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .faq-question h3 {
-    margin: 0;
-    font-size: 18px;
-    flex: 1;
+  margin: 0;
+  font-size: 18px;
+  flex: 1;
 }
 
 /* Icon */
 .faq-question .icon {
-    display: inline-flex;
-    background: #007bff;
-    color: #fff;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 20px;
+  display: inline-flex;
+  background: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 /* Toggle Button */
 .faq-question .toggle {
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: #007bff;
-    cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #007bff;
+  cursor: pointer;
 }
 
 /* Định dạng nội dung trả lời */
 .faq-answer {
-    margin-top: 10px;
-    display: none;
-    font-size: 15px;
-    text-align: left; /* Căn trái câu trả lời */
-    opacity: 0; /* Thêm opacity */
-    transition: opacity 0.3s ease-in-out; /* Thêm transition */
+  margin-top: 10px;
+  display: none;
+  font-size: 15px;
+  text-align: left; /* Căn trái câu trả lời */
 }
 
 /* Hiển thị câu trả lời khi mở */
 .faq-answer.open {
-    display: block;
-    opacity: 1; /* Thêm opacity */
+  display: block;
+}
+
+/* FAQ Section */
+.accordion-button {
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 8px !important;
+}
+.accordion-body {
+  background-color: #fff;
+  border-radius: 0 0 8px 8px;
+}
+.accordion-item {
+  border-radius: 8px;
+}
+.faq-icon {
+  font-size: 1.2rem;
 }
 
 /* GET FREE ESTIMATE */
